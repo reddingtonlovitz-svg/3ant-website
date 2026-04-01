@@ -64,7 +64,7 @@ export default function Services() {
   }, []);
 
   return (
-    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pb-24 space-y-32" ref={containerRef}>
+    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-16 md:space-y-32" ref={containerRef}>
       <SEO 
         title="Услуги маркетинга и разработки | 3ant Agency"
         description="Комплексное сопровождение: от создания сайтов и SEO до внедрения Bitrix24 и сквозной аналитики. Системные решения для роста бизнеса."
@@ -77,7 +77,7 @@ export default function Services() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Системные решения</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
             Услуги, которые <br/>
             помогают бизнесу <br/>
             <span className="text-emerald-500 italic">получать заявки и расти</span>
@@ -193,7 +193,7 @@ export default function Services() {
         <div className="services-grid grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto]">
           
           {/* CARD 1: SITES */}
-          <BentoCard className="md:col-span-3 overflow-hidden group min-h-[500px]">
+          <BentoCard className="md:col-span-3 overflow-hidden group min-h-[400px] md:min-h-[500px]">
             <div className="relative z-10 w-full h-full flex flex-col lg:flex-row gap-8">
               <div className="lg:w-[40%] flex flex-col justify-between">
                 <div>
@@ -277,7 +277,7 @@ export default function Services() {
           </BentoCard>
 
           {/* CARD 2: SEO */}
-          <BentoCard className="flex flex-col justify-between group min-h-[500px]">
+          <BentoCard className="flex flex-col justify-between group min-h-[400px] md:min-h-[500px]">
              <div>
                 <div className="bg-emerald-500/10 p-4 rounded-2xl w-fit mb-8">
                   <Globe className="text-emerald-500" size={28} />
@@ -309,7 +309,7 @@ export default function Services() {
           </BentoCard>
 
           {/* CARD 3: PERFORMANCE */}
-          <BentoCard className="flex flex-col justify-between group min-h-[500px]">
+          <BentoCard className="flex flex-col justify-between group min-h-[400px] md:min-h-[500px]">
              <div>
                 <div className="bg-emerald-500/10 p-4 rounded-2xl w-fit mb-8">
                   <Target className="text-emerald-500" size={28} />
@@ -367,7 +367,7 @@ export default function Services() {
           </BentoCard>
 
           {/* CARD 4: CRM */}
-          <BentoCard className="flex flex-col justify-between group min-h-[500px]">
+          <BentoCard className="flex flex-col justify-between group min-h-[400px] md:min-h-[500px]">
              <div>
                 <div className="bg-emerald-500/10 p-4 rounded-2xl w-fit mb-8">
                   <Database className="text-emerald-500" size={28} />
@@ -399,7 +399,7 @@ export default function Services() {
           </BentoCard>
 
           {/* CARD 5: AUTOMATION */}
-          <BentoCard className="flex flex-col justify-between group min-h-[500px]">
+          <BentoCard className="flex flex-col justify-between group min-h-[400px] md:min-h-[500px]">
              <div>
                 <div className="bg-emerald-500/10 p-4 rounded-2xl w-fit mb-8">
                   <Zap className="text-emerald-500" size={28} />
@@ -491,7 +491,7 @@ export default function Services() {
       </section>
 
       {/* BLOCK 4: FLOWCHART */}
-      <section className="reveal-section relative liquid-glass-card rounded-[3rem] py-16 lg:py-20 px-8 lg:px-24 overflow-hidden border border-white/10 bg-white/[0.01]">
+      <section className="reveal-section relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-24 overflow-hidden border border-white/10 bg-white/[0.01]">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.02] to-transparent pointer-events-none"></div>
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-medium text-white mb-6 tracking-tight">Как это работает</h2>
@@ -534,7 +534,7 @@ export default function Services() {
       {/* BLOCK 5: TRUST */}
       <section className="reveal-section flex flex-col lg:flex-row gap-20 items-center">
          <div className="lg:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-medium text-white mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-6 md:mb-8 leading-[1.1] tracking-tight">
               Вам не нужно <br/>
               разбираться во всех <br/>
               инструментах <span className="text-emerald-500 italic">самостоятельно</span>
@@ -587,10 +587,10 @@ export default function Services() {
       </section>
 
       {/* BLOCK 7: FINAL CTA */}
-      <section className="reveal-section relative bg-graphite-900 rounded-[4rem] p-12 md:p-32 text-center flex flex-col items-center overflow-hidden border border-white/5 shadow-2xl">
+      <section className="reveal-section relative bg-graphite-900 rounded-[1.5rem] md:rounded-[4rem] p-6 sm:p-8 md:p-16 lg:p-32 text-center flex flex-col items-center overflow-hidden border border-white/5 shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/15 via-transparent to-transparent pointer-events-none"></div>
         
-        <h2 className="text-4xl md:text-7xl font-semibold tracking-tight leading-[1.05] max-w-5xl mb-12 relative z-10 text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.05] max-w-5xl mb-8 md:mb-12 relative z-10 text-white">
           Подберём решения под вашу задачу <br/>
           и соберём <span className="text-emerald-500">рабочую систему роста</span>
         </h2>

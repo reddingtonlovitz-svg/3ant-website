@@ -56,7 +56,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pb-24 space-y-32" ref={containerRef}>
+    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-16 md:space-y-32" ref={containerRef}>
       <SEO 
         title="Агентство системного маркетинга | Продажи, CRM, Рост"
         description="Строим рабочие связки маркетинга и продаж. Сайт, SEO, CRM и аналитика в единой системе для вашего бизнеса."
@@ -64,7 +64,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 lg:gap-8 items-center pt-8">
         <div className="hero-text flex flex-col pr-0 lg:pr-12">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8">
             <div className="min-h-[2.1em] md:min-h-[2.1em] flex items-end mb-2 sm:mb-4 pr-4">
               <TypewriterText />
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* FILTER SECTION */}
-      <section className="relative liquid-glass-card rounded-[3rem] p-10 md:p-16 flex flex-col lg:flex-row gap-16 scroll-reveal overflow-hidden transform-gpu">
+      <section className="relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-16 flex flex-col lg:flex-row gap-10 md:gap-16 scroll-reveal overflow-hidden transform-gpu">
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none"></div>
           <div className="lg:w-1/3 relative z-10">
             <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-6">Мы подходим<br/>не всем</h2>
@@ -170,7 +170,7 @@ export default function Home() {
       <section className="scroll-reveal -mx-4 px-4 sm:mx-0 sm:px-0">
         <div className="mb-12 text-center lg:text-left">
           <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">В чём наша разница</h2>
-          <h3 className="text-4xl md:text-5xl font-medium tracking-tight">Мы не просто агентство.<br className="hidden md:block"/> Мы выстраиваем систему.</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight">Мы не просто агентство.<br className="hidden md:block"/> Мы выстраиваем систему.</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BentoCard>
@@ -214,7 +214,7 @@ export default function Home() {
 
       {/* SCHEMA */}
       <section className="relative scroll-reveal mt-32 mb-32">
-        <div className="liquid-glass-card rounded-[3rem] py-20 px-6 lg:px-16 relative overflow-hidden transform-gpu">
+        <div className="liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] py-12 md:py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden transform-gpu">
           <div className="text-center mb-16 relative z-10">
             <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Как выглядит система роста</h2>
           </div>
@@ -270,7 +270,7 @@ export default function Home() {
       <section className="scroll-reveal">
         <div className="mb-12 text-center lg:text-left">
           <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">Направления</h2>
-          <h3 className="text-4xl md:text-5xl font-medium tracking-tight">Что мы строим для бизнеса</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight">Что мы строим для бизнеса</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[280px]">
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">Наши работы</h2>
-            <h3 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">Опыт, который можно проверить</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight mb-4">Опыт, который можно проверить</h3>
             <p className="text-graphite-400 max-w-xl text-lg">
               Мы показываем не «красивые макеты», а результат и логику работы: что было, что сделали, как считали и что изменилось.
             </p>
@@ -372,7 +372,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link 
             to="/cases#volkhonka"
-            className="group relative h-[420px] rounded-[2rem] overflow-hidden border border-white/5 bg-graphite-800 flex flex-col justify-end p-8 cursor-pointer"
+            className="group relative h-[320px] md:h-[420px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/5 bg-graphite-800 flex flex-col justify-end p-6 md:p-8 cursor-pointer"
           >
             <div className="absolute inset-0 bg-[url('/images/cases/volkhonka/site.png')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-700 mix-blend-screen"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/80 to-transparent"></div>
@@ -459,10 +459,10 @@ export default function Home() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="mt-32 bg-graphite-800 rounded-[3rem] p-12 md:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 scroll-reveal">
+      <section className="mt-16 md:mt-32 bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 scroll-reveal">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none mix-blend-screen"></div>
         <div className="absolute top-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-full bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold tracking-tight leading-[1.1] max-w-3xl mb-8 relative z-10">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-3xl mb-6 md:mb-8 relative z-10">
           Если вам нужен маркетинг, который работает — давайте обсудим задачу
         </h2>
         <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-2xl relative z-10 font-light">

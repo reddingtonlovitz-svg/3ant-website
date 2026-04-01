@@ -74,7 +74,7 @@ export default function Approach() {
   }, []);
 
   return (
-    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pb-24 space-y-32" ref={containerRef}>
+    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-16 md:space-y-32" ref={containerRef}>
       <SEO 
         title="Наш подход к маркетингу | 3ant Agency"
         description="Данные вместо интуиции. Системный взгляд на воронку продаж и прозрачность каждого шага от клика до сделки в CRM."
@@ -86,7 +86,7 @@ export default function Approach() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Наш подход</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
             Маркетинг как <br/>
             <span className="text-emerald-500 italic block my-2">единую систему</span>
             <span className="text-graphite-400">сильного бизнеса</span>
@@ -151,12 +151,12 @@ export default function Approach() {
       </section>
 
       {/* BLOCK 2: MEANING - CLEAN 3-COLUMN LAYOUT */}
-      <section className="reveal-section relative liquid-glass-card rounded-[3.5rem] p-10 md:p-16 overflow-hidden border border-white/5 bg-graphite-950/40 backdrop-blur-xl">
+      <section className="reveal-section relative liquid-glass-card rounded-[1.5rem] md:rounded-[3.5rem] p-6 sm:p-8 md:p-16 overflow-hidden border border-white/5 bg-graphite-950/40 backdrop-blur-xl">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent pointer-events-none"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1.1fr] gap-12 lg:gap-16 items-start relative z-10">
             {/* COLUMN 1: TITLE */}
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] text-white">
               Мы начинаем <br/>
               <span className="text-emerald-500">не с инструментов,</span> <br/>
               а с задачи бизнеса
@@ -178,7 +178,7 @@ export default function Approach() {
       <section className="reveal-section">
         <div className="mb-12 text-center lg:text-left">
           <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">На чём строится наш подход</h2>
-          <h3 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-2">На чём строится наш подход</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight text-white mb-2">На чём строится наш подход</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -260,7 +260,7 @@ export default function Approach() {
 
       {/* BLOCK 5: ACCENT BLOCK - OPTIMIZED */}
       <section className="reveal-section">
-          <div className="relative liquid-glass-card rounded-[2.5rem] p-8 md:p-12 overflow-hidden border border-white/10 bg-white/[0.01] flex flex-col lg:flex-row gap-8 items-center">
+          <div className="relative liquid-glass-card rounded-[1.5rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 overflow-hidden border border-white/10 bg-white/[0.01] flex flex-col lg:flex-row gap-8 items-center">
             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-emerald-500/5 to-transparent pointer-events-none"></div>
             <div className="lg:w-1/2 relative z-10">
               <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6 leading-[1.15] text-white">
@@ -282,7 +282,7 @@ export default function Approach() {
       <section className="reveal-section">
         <div className="mb-12 text-center lg:text-left">
           <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">Во что мы верим</h2>
-          <h3 className="text-4xl md:text-5xl font-medium tracking-tight text-white">Фундамент нашей работы</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight text-white">Фундамент нашей работы</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -322,10 +322,10 @@ export default function Approach() {
       </section>
 
       {/* BLOCK 7: FINAL CTA - MATCHED WITH HOME */}
-      <section className="bg-graphite-800 rounded-[3rem] p-12 md:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 reveal-section">
+      <section className="bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 reveal-section">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none mix-blend-screen"></div>
         <div className="absolute top-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-full bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold tracking-tight leading-[1.1] max-w-4xl mb-8 relative z-10 text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-4xl mb-6 md:mb-8 relative z-10 text-white">
           Нам интересны проекты, где нужен не просто подрядчик, а <span className="text-emerald-500">внятная система роста</span>
         </h2>
         <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-3xl relative z-10 font-light text-center">

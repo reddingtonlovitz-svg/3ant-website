@@ -63,7 +63,7 @@ export default function Cases() {
   }, []);
 
   return (
-    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pb-24 space-y-32" ref={containerRef}>
+    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-16 md:space-y-32" ref={containerRef}>
       <SEO 
         title="Кейсы и результаты проектов | 3ant Agency"
         description="Портфолио реализованных проектов: Металлобаза Волхонка, ОборонСпецСплав, ПрофЛайн. Оцифрованные результаты и системный маркетинг."
@@ -76,7 +76,7 @@ export default function Cases() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Портфолио проектов</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
             Кейсы, в которых <br/>
             маркетинг связан с <br/>
             <span className="text-emerald-500 italic">продажами, CRM и результатом</span>
@@ -148,7 +148,7 @@ export default function Cases() {
       </section>
 
       {/* SECTION 2: INTRO BLOCK */}
-      <section className="reveal-section relative liquid-glass-card rounded-[3rem] p-12 lg:p-24 overflow-hidden border border-white/10 bg-white/[0.01]">
+      <section className="reveal-section relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 overflow-hidden border border-white/10 bg-white/[0.01]">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.02] to-transparent pointer-events-none"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -241,7 +241,7 @@ export default function Cases() {
                              <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                              <span>SPB REGION</span>
                           </div>
-                          <h3 className="text-4xl md:text-6xl font-medium text-white leading-tight underline decoration-emerald-500/30 decoration-2 underline-offset-8">
+                          <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight underline decoration-emerald-500/30 decoration-2 underline-offset-8">
                             Металлобаза Волхонка
                           </h3>
                           <a href="https://metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -329,7 +329,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>MOSCOW EXPANSION</span>
                       </div>
-                      <h3 className="text-4xl md:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
                          Металлобаза Волхонка — МСК
                       </h3>
                       <a href="https://msk.metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -416,7 +416,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>COMPLEX B2B</span>
                       </div>
-                      <h3 className="text-4xl md:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
                          ОборонСпецСплав
                       </h3>
                       <a href="https://oboronspecsplav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -503,7 +503,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>FROM ZERO TO FLOW</span>
                       </div>
-                      <h3 className="text-4xl md:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
                          ПрофЛайн
                       </h3>
                       <a href="https://profnastils.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -580,7 +580,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>INDUSTRIAL STARTUP</span>
                       </div>
-                      <h3 className="text-4xl md:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
                          БЛТ Абразив
                       </h3>
                       <a href="https://blt-abraziv.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -646,7 +646,7 @@ export default function Cases() {
       </section>
 
       {/* SECTION 4: SUMMARY BLOCK */}
-      <section className="reveal-section relative liquid-glass-card rounded-[3rem] p-12 lg:p-24 overflow-hidden border border-white/10 bg-white/[0.01]">
+      <section className="reveal-section relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 overflow-hidden border border-white/10 bg-white/[0.01]">
          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-medium text-white mb-12 tracking-tight text-center">Что объединяет все проекты</h2>
@@ -676,7 +676,7 @@ export default function Cases() {
 
       {/* SECTION 5: FINAL CTA */}
       <section className="reveal-section py-24">
-        <div className="liquid-glass-card rounded-[4rem] p-12 lg:p-24 text-center relative overflow-hidden group">
+        <div className="liquid-glass-card rounded-[1.5rem] md:rounded-[4rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center relative overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
           <h2 className="text-3xl md:text-6xl font-medium text-white mb-8 tracking-tight max-w-4xl mx-auto">
             Если вам нужен не просто сайт, а рабочая система привлечения заявок — <span className="text-emerald-500 italic">обсудим задачу</span>

@@ -17,7 +17,7 @@ const ContactInfo = memo(() => {
           <span className="w-10 h-[1px] bg-emerald-500/50"></span>
           <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Связь с нами</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] text-white">
           Контакты
         </h1>
         <p className="text-graphite-300 text-lg md:text-xl max-w-md leading-relaxed font-light">
@@ -29,13 +29,13 @@ const ContactInfo = memo(() => {
       </div>
 
       <div className="space-y-8 pt-8 border-t border-white/5">
-        <a href="tel:89137154800" className="group flex items-center gap-6 text-2xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
+        <a href="tel:89137154800" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
           <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all">
             <Phone size={28} className="text-emerald-500" />
           </div>
           8 (913) 715-48-00
         </a>
-        <a href="mailto:ab4800@yandex.ru" className="group flex items-center gap-6 text-2xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
+        <a href="mailto:ab4800@yandex.ru" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
           <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all">
             <Mail size={28} className="text-emerald-500" />
           </div>
@@ -67,7 +67,7 @@ export default function Contacts() {
   }, []);
 
   return (
-    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-6 pb-24 pt-16 overflow-x-hidden" ref={containerRef}>
+    <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 pt-8 md:pt-16 overflow-x-hidden" ref={containerRef}>
       <SEO 
         title="Контакты агентства 3ant | Обсудить проект"
         description="Свяжитесь с нами для аудита вашего маркетинга или начала разработки проекта. Поможем выстроить систему роста для вашего бизнеса."
@@ -86,7 +86,7 @@ export default function Contacts() {
         </div>
 
         <div className="reveal-card">
-          <div className="liquid-glass-card rounded-[3rem] p-8 md:p-16 border border-white/10 bg-white/[0.02] shadow-2xl relative overflow-hidden group">
+          <div className="liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-16 border border-white/10 bg-white/[0.02] shadow-2xl relative overflow-hidden group">
             <ContactForm />
           </div>
         </div>
