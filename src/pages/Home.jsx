@@ -61,72 +61,87 @@ export default function Home() {
         title="Агентство системного маркетинга | Продажи, CRM, Рост"
         description="Строим рабочие связки маркетинга и продаж. Сайт, SEO, CRM и аналитика в единой системе для вашего бизнеса."
       />
-      {/* HERO SECTION */}
-      <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 lg:gap-8 items-center pt-8">
-        <div className="hero-text flex flex-col pr-0 lg:pr-12">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8">
-            <div className="min-h-[2.1em] md:min-h-[2.1em] flex items-end mb-2 sm:mb-4 pr-4">
-              <TypewriterText />
-            </div>
-            <div className="text-white">
-              для Роста<br/>Бизнеса
-            </div>
-          </h1>
-          <p className="text-graphite-300 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light">
-            Мы строим сайты и продвижение как единую систему роста: 
-            от первого клика до заявки в CRM, прозрачной воронки и измеримого результата.
-          </p>
-          <div className="flex flex-wrap items-center gap-6 mb-12">
-            <button 
-              onClick={openContactModal}
-              className="group relative px-8 py-4 bg-white text-graphite-950 font-semibold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
-            >
-              <div className="absolute inset-0 bg-graphite-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <span className="relative flex items-center gap-2">
-                Обсудить проект <span className="text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-              </span>
-            </button>
-            <a href="#" className="text-graphite-300 font-medium underline decoration-white/20 underline-offset-8 hover:text-white hover:decoration-white transition-all duration-300">
-              Посмотреть кейсы
-            </a>
+      {/* HERO SECTION - 100vh stages scaling */}
+      <section className="flex-1 lg:min-h-[calc(100vh-160px)] grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-stretch pt-4 md:pt-6">
+        <div className="hero-text flex flex-col justify-between h-full pr-0 lg:pr-12">
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-[-0.03em] leading-[0.9] mb-4 md:mb-6">
+              <div className="min-h-[2.1em] md:min-h-[2.1em] flex items-end mb-4">
+                <TypewriterText />
+              </div>
+              
+              <div className="text-white text-4xl sm:text-5xl md:text-6xl leading-[1] mt-2">
+                для роста<br/>Вашего Бизнеса
+              </div>
+            </h1>
+
+            <p className="text-graphite-300 text-base md:text-lg max-w-xl mb-6 leading-relaxed font-light">
+              Мы строим сайты и продвижение как единую систему роста: 
+              от первого клика до заявки в CRM, прозрачной воронки и измеримого результата.
+            </p>
           </div>
-          <div className="text-sm font-medium text-graphite-500 tracking-wide uppercase flex flex-wrap gap-x-4 gap-y-2">
-            <span>Сайты</span> <span className="text-graphite-700">•</span>
-            <span>SEO</span> <span className="text-graphite-700">•</span>
-            <span>Performance</span> <span className="text-graphite-700">•</span>
-            <span>CRM</span> <span className="text-graphite-700">•</span>
-            <span>Автоматизация</span>
+
+          <div className="flex flex-col gap-8 md:gap-10">
+            <div className="">
+              {/* Service Tags Moved Here */}
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] sm:text-[11px] font-bold text-emerald-500/80 tracking-[0.2em] uppercase">
+                 <span>Сайты</span> <span>•</span>
+                 <span>SEO</span> <span>•</span>
+                 <span>Performance</span> <span>•</span>
+                 <span>CRM</span> <span>•</span>
+                 <span>Автоматизация</span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6">
+              <button 
+                onClick={openContactModal}
+                className="group relative px-8 py-4 bg-white text-graphite-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-2xl shadow-white/5"
+              >
+                <div className="absolute inset-0 bg-graphite-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span className="relative flex items-center gap-2">
+                  Обсудить проект <span className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                </span>
+              </button>
+              <a href="#" className="group px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/30 active:scale-[0.98]">
+                Посмотреть кейсы
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-[220px]">
-          <BentoCard>
-              <h3 className="text-3xl font-medium tracking-tight">15+ лет<br/>опыта</h3>
-              <p className="text-graphite-400 text-sm leading-relaxed mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-2 gap-4 h-full">
+          <BentoCard className="bg-white/[0.03] border-white/10">
+            <div className="flex flex-col h-full justify-between">
+              <h3 className="text-2xl font-medium tracking-tight text-white leading-tight">15+ лет<br/>опыта</h3>
+              <p className="text-graphite-400 text-xs leading-relaxed">
                 Работаем не «по шаблону», а от задачи бизнеса.
               </p>
+            </div>
           </BentoCard>
-          <BentoCard>
-              <h3 className="text-3xl font-medium tracking-tight">CRM и<br/>аналитика</h3>
-              <p className="text-graphite-400 text-sm leading-relaxed mt-4">
+          <BentoCard className="bg-white/[0.03] border-white/10">
+            <div className="flex flex-col h-full justify-between">
+              <h3 className="text-2xl font-medium tracking-tight text-white leading-tight">CRM и<br/>аналитика</h3>
+              <p className="text-graphite-400 text-xs leading-relaxed">
                 Прозрачная воронка и контроль на каждом этапе.
               </p>
+            </div>
           </BentoCard>
-          <BentoCard colSpan={2}>
-              <div className="flex h-full items-end justify-between relative z-10 w-full">
-                <div className="max-w-[60%]">
-                  <h3 className="text-3xl font-medium tracking-tight mb-2">SEO как актив</h3>
-                  <p className="text-graphite-400 text-sm leading-relaxed">
-                    Строим устойчивый поисковый трафик, который работает годами без постоянных вливаний.
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <div className="w-12 h-12 bg-graphite-700/50 rounded-full flex items-center justify-center border border-white/5">
-                    <ArrowRight className="text-graphite-300" />
-                  </div>
+          <BentoCard colSpan={2} className="bg-white/[0.03] border-white/10 lg:row-span-1">
+            <div className="flex h-full items-end justify-between relative z-10 w-full">
+              <div className="max-w-[70%]">
+                <h3 className="text-3xl font-medium tracking-tight mb-2 text-white">SEO как актив</h3>
+                <p className="text-graphite-400 text-xs leading-relaxed max-w-sm">
+                  Строим устойчивый поисковый трафик, который работает годами без постоянных вливаний.
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-12 h-12 bg-graphite-700/50 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/40 transition-all duration-500">
+                  <ArrowRight className="text-white opacity-60 group-hover:opacity-100" />
                 </div>
               </div>
-              <div className="absolute top-1/2 right-[-20%] w-[300px] h-[300px] bg-gradient-to-br from-graphite-700 to-transparent rounded-full blur-2xl opacity-20 pointer-events-none" data-rotation="15"></div>
+            </div>
+            <div className="absolute top-1/2 right-[-10%] w-[340px] h-[340px] bg-gradient-to-br from-emerald-500/10 to-transparent rounded-full blur-[100px] pointer-events-none group-hover:opacity-60 transition-opacity duration-1000"></div>
           </BentoCard>
         </div>
       </section>

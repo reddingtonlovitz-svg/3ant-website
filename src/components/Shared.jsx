@@ -14,7 +14,7 @@ export const InteractiveBackground = () => {
           const x = e.clientX;
           const y = e.clientY;
           
-          const isOverElement = e.target.closest('section, header, footer, nav, a, button, .bento-card, .liquid-glass-card, h1, h2, h3, p') !== null;
+          const isOverElement = e.target.closest('.bento-card') !== null;
           
           bgRef.current.style.setProperty('--mouse-x', `${x}px`);
           bgRef.current.style.setProperty('--mouse-y', `${y}px`);
@@ -62,6 +62,28 @@ export const MicroUIStyles = () => (
     @keyframes spinSlow {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      }
+      50% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+      }
+    }
+    .liquid-glass-card {
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.005));
+      background-color: rgba(8, 8, 8, 0.4);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      contain: layout style paint;
+      
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-right-color: rgba(255, 255, 255, 0.03);
+      border-bottom-color: rgba(255, 255, 255, 0.03);
     }
   `}</style>
 );
@@ -128,10 +150,10 @@ export const TypewriterText = () => {
   }, [text, isDeleting, index, isWaiting]);
 
   return (
-    <>
-      <span className="text-emerald-500 whitespace-pre-line">{text}</span>
-      <span className="inline-block w-[4px] h-[0.85em] bg-emerald-500 ml-1 sm:ml-2 translate-y-[0.1em] opacity-80 animate-[pulse_1s_step-end_infinite]"></span>
-    </>
+    <span className="text-emerald-500 whitespace-pre-line">
+      {text}
+      <span className="inline-block w-[2px] md:w-[4px] h-[0.8em] bg-emerald-500 ml-1 sm:ml-2 opacity-80 animate-[pulse_1s_step-end_infinite] translate-y-[0.1em]"></span>
+    </span>
   );
 };
 

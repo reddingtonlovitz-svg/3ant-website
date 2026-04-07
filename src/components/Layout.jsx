@@ -8,11 +8,19 @@ import { Menu, X, Phone } from 'lucide-react';
 export const Header = ({ onOpenContact }) => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const overlayRef = useRef(null);
   const menuLinksRef = useRef(null);
 
   const isActive = (path) => location.pathname === path ? "text-white" : "text-graphite-300 hover:text-white transition-colors duration-300";
   const isMobileActive = (path) => location.pathname === path ? "text-emerald-500" : "text-white/70";
+
+  // Handle Scroll
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -36,43 +44,48 @@ export const Header = ({ onOpenContact }) => {
       gsap.to(overlayRef.current, { opacity: 0, pointerEvents: 'none', duration: 0.25, ease: 'power2.in' });
     }
   }, [mobileMenuOpen]);
-  
+
   return (
     <>
-      <header className="relative z-50 w-full px-4 sm:px-6 py-5 md:py-8 max-w-[1400px] mx-auto flex justify-between items-center text-[15px] font-medium border-b border-white/5 mb-8 md:mb-12">
-        <NavLink to="/" className="text-xl font-bold tracking-tight uppercase relative z-[60]">3ant</NavLink>
-        
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-8 lg:gap-10 text-graphite-300">
-          <NavLink to="/" className={isActive("/")}>Главная</NavLink>
-          <NavLink to="/services" className={isActive("/services")}>Услуги</NavLink>
-          <NavLink to="/approach" className={isActive("/approach")}>Подход</NavLink>
-          <NavLink to="/cases" className={isActive("/cases")}>Кейсы</NavLink>
-          <NavLink to="/contacts" className={isActive("/contacts")}>Контакты</NavLink>
-        </nav>
-        
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:89137154800" className="hidden sm:flex items-center gap-3 bg-graphite-800/80 px-5 py-2.5 rounded-full border border-white/5 hover:border-white/20 hover:text-white transition-all duration-300">
-            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-            8 (913) 715-48-00
-          </a>
+      <div className="h-20 sm:h-24 md:h-28"></div> {/* Spacer for fixed header */}
+      <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${isScrolled ? 'py-3 bg-graphite-950/60 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'py-5 md:py-8 bg-transparent'}`}>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex justify-between items-center text-[15px] font-medium">
+          <div className="flex items-center gap-12 lg:gap-16">
+            <NavLink to="/" className="text-xl font-bold tracking-tight uppercase relative z-[60]">3ant</NavLink>
+            
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex gap-8 lg:gap-10 text-graphite-300">
+              <NavLink to="/" className={isActive("/")}>Главная</NavLink>
+              <NavLink to="/services" className={isActive("/services")}>Услуги</NavLink>
+              <NavLink to="/approach" className={isActive("/approach")}>Подход</NavLink>
+              <NavLink to="/cases" className={isActive("/cases")}>Кейсы</NavLink>
+              <NavLink to="/contacts" className={isActive("/contacts")}>Контакты</NavLink>
+            </nav>
+          </div>
+          
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center gap-6">
+            <a href="tel:89137154800" className="hidden sm:flex items-center gap-3 bg-graphite-800/80 px-5 py-2.5 rounded-full border border-white/5 hover:border-white/20 hover:text-white transition-all duration-300">
+              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
+              8 (913) 715-48-00
+            </a>
+            <button 
+              onClick={onOpenContact}
+              className="bg-emerald-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-[pulse-glow_2s_ease-in-out_infinite]"
+            >
+              Обсудить проект
+            </button>
+          </div>
+
+          {/* Mobile Hamburger */}
           <button 
-            onClick={onOpenContact}
-            className="bg-white text-graphite-950 px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-lg shadow-emerald-500/10"
+            className="lg:hidden relative z-[60] w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 active:scale-90 transition-transform"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Меню"
           >
-            Обсудить проект
+            {mobileMenuOpen ? <X size={22} className="text-white" /> : <Menu size={22} className="text-white" />}
           </button>
         </div>
-
-        {/* Mobile Hamburger */}
-        <button 
-          className="lg:hidden relative z-[60] w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 active:scale-90 transition-transform"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Меню"
-        >
-          {mobileMenuOpen ? <X size={22} className="text-white" /> : <Menu size={22} className="text-white" />}
-        </button>
       </header>
 
       {/* Mobile Fullscreen Menu Overlay */}
@@ -134,7 +147,7 @@ export const Layout = () => {
   const closeContactModal = () => setIsContactModalOpen(false);
 
   return (
-    <div className="relative min-h-screen bg-transparent text-graphite-50 font-sans selection:bg-white/20 overflow-x-hidden">
+    <div className="relative flex flex-col min-h-screen bg-transparent text-graphite-50 font-sans selection:bg-white/20 overflow-x-hidden">
       <MicroUIStyles />
       <InteractiveBackground />
       {/* Texture Background */}
@@ -142,7 +155,7 @@ export const Layout = () => {
 
       <Header onOpenContact={openContactModal} />
       
-      <main className="relative z-10 w-full max-w-[1400px] mx-auto">
+      <main className="relative z-10 w-full max-w-[1400px] mx-auto flex-1 flex flex-col">
         <Outlet context={{ openContactModal }} />
       </main>
 
