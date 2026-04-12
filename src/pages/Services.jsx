@@ -430,58 +430,73 @@ export default function Services() {
           </BentoCard>
 
           {/* НОВОЕ: ВИЗУАЛИЗАЦИЯ АВТОМАТИЗАЦИИ */}
-          <BentoCard className="md:col-span-2 min-h-[500px] overflow-hidden group">
+          <BentoCard className="md:col-span-2 min-h-[450px] md:min-h-[500px] overflow-hidden group">
              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent pointer-events-none"></div>
-             <div className="relative z-10 w-full h-full flex flex-col justify-center items-center p-12">
-                <div className="text-center mb-12">
-                   <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-500 mb-2">Логика процессов</h4>
-                   <p className="text-graphite-500 text-xs font-light max-w-xs mx-auto">Сигналы распределяются автоматически по заданным сценариям</p>
+             <div className="relative z-10 w-full h-full flex flex-col justify-center items-center p-6 sm:p-12">
+                <div className="text-center mb-8 md:mb-12">
+                   <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-500 mb-2 font-mono">Логика процессов</h4>
+                   <p className="text-graphite-500 text-[10px] sm:text-xs font-light max-w-xs mx-auto font-body">Сигналы распределяются автоматически по заданным сценариям</p>
                 </div>
 
-                <div className="relative w-full max-w-[500px] h-[200px]">
-                   {/* Логические шлюзы */}
-                   <div className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-8">
+                <div className="relative w-full max-w-[500px] aspect-[5/2] sm:h-[200px]">
+                   {/* Логические шлюзы - Входы */}
+                   <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-between py-2 md:py-4 z-20">
                       {[1, 2, 3].map(i => (
-                         <div key={i} className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center animate-pulse">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500/50"></div>
+                         <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center animate-pulse">
+                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-emerald-500/50"></div>
                          </div>
                       ))}
                    </div>
 
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-16 h-16 rounded-3xl bg-emerald-500/20 border-2 border-emerald-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(16,185,129,0.2)]">
-                      <Zap size={24} className="text-emerald-500" />
+                   {/* Логический шлюз - Выход */}
+                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-2xl md:rounded-3xl bg-emerald-500/20 border-2 border-emerald-500/40 flex items-center justify-center shadow-[0_0_40px_rgba(16,185,129,0.2)] z-20">
+                      <Zap size={20} className="text-emerald-500 md:hidden" />
+                      <Zap size={24} className="text-emerald-500 hidden md:block" />
                    </div>
 
-                   {/* Линии и частицы */}
-                   <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                      <path d="M 40 50 L 250 50 L 450 100" stroke="white" strokeWidth="0.5" fill="none" className="opacity-10" />
-                      <circle r="2" fill="#10b981">
-                        <animateMotion dur="3s" repeatCount="indefinite" path="M 40 50 L 250 50 L 450 100" />
+                   {/* Центральный процессор */}
+                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-8 md:w-24 md:h-12 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-md z-20 shadow-xl">
+                      <Cpu size={16} className="text-graphite-400 md:hidden" />
+                      <Cpu size={20} className="text-graphite-400 hidden md:block" />
+                   </div>
+
+                   {/* Линии и частицы - С использованием viewBox для адаптивности */}
+                   <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid meet">
+                      {/* Фоновые пути */}
+                      <path d="M 40 40 C 150 40, 300 100, 460 100" stroke="white" strokeWidth="1" fill="none" className="opacity-[0.03]" />
+                      <path d="M 40 100 L 460 100" stroke="white" strokeWidth="1" fill="none" className="opacity-[0.03]" />
+                      <path d="M 40 160 C 150 160, 300 100, 460 100" stroke="white" strokeWidth="1" fill="none" className="opacity-[0.03]" />
+                      
+                      {/* Анимированные частицы */}
+                      <circle r="2.5" fill="#10b981" className="shadow-[0_0_8px_#10B981]">
+                        <animateMotion dur="2.5s" repeatCount="indefinite" path="M 40 40 C 150 40, 300 100, 460 100" />
                       </circle>
-                      <path d="M 40 100 L 250 100 L 450 100" stroke="white" strokeWidth="0.5" fill="none" className="opacity-10" />
-                      <circle r="2" fill="#10b981">
-                        <animateMotion dur="4s" repeatCount="indefinite" path="M 40 100 L 250 100 L 450 100" />
+                      <circle r="2.5" fill="#10b981" className="shadow-[0_0_8px_#10B981]">
+                        <animateMotion dur="3.5s" repeatCount="indefinite" path="M 40 100 L 460 100" />
                       </circle>
-                      <path d="M 40 150 L 250 150 L 450 100" stroke="white" strokeWidth="0.5" fill="none" className="opacity-10" />
-                      <circle r="2" fill="#10b981">
-                        <animateMotion dur="5s" repeatCount="indefinite" path="M 40 150 L 250 150 L 450 100" />
+                      <circle r="2.5" fill="#10b981" className="shadow-[0_0_8px_#10B981]">
+                        <animateMotion dur="4.5s" repeatCount="indefinite" path="M 40 160 C 150 160, 300 100, 460 100" />
+                      </circle>
+
+                      {/* Дополнительные более быстрые частицы */}
+                      <circle r="1.5" fill="white" className="opacity-40">
+                        <animateMotion dur="1.8s" repeatCount="indefinite" path="M 40 40 C 150 40, 300 100, 460 100" begin="0.5s" />
+                      </circle>
+                      <circle r="1.5" fill="white" className="opacity-40">
+                        <animateMotion dur="2.2s" repeatCount="indefinite" path="M 40 100 L 460 100" begin="1s" />
                       </circle>
                    </svg>
-
-                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md">
-                      <Cpu size={20} className="text-graphite-400" />
-                   </div>
                 </div>
                 
-                <div className="mt-12 flex items-center gap-10">
+                <div className="mt-8 md:mt-12 flex items-center gap-6 md:gap-10">
                    <div className="flex flex-col items-center">
-                      <span className="text-white font-mono text-lg tracking-tighter">99.9%</span>
-                      <span className="text-[8px] uppercase tracking-widest text-graphite-500">Точность</span>
+                      <span className="text-white font-mono text-base md:text-lg tracking-tighter">99.9%</span>
+                      <span className="text-[8px] uppercase tracking-widest text-graphite-500 font-mono">Точность</span>
                    </div>
-                   <div className="w-[1px] h-8 bg-white/10"></div>
+                   <div className="w-[1px] h-6 md:h-8 bg-white/10"></div>
                    <div className="flex flex-col items-center">
-                      <span className="text-emerald-500 font-mono text-lg tracking-tighter">&lt; 100ms</span>
-                      <span className="text-[8px] uppercase tracking-widest text-graphite-500">Отклик</span>
+                      <span className="text-emerald-500 font-mono text-base md:text-lg tracking-tighter">&lt; 100ms</span>
+                      <span className="text-[8px] uppercase tracking-widest text-graphite-500 font-mono">Отклик</span>
                    </div>
                 </div>
              </div>
