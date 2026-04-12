@@ -65,17 +65,17 @@ export default function Home() {
       <section className="flex-1 lg:min-h-[calc(100vh-160px)] grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-stretch pt-4 md:pt-6">
         <div className="hero-text flex flex-col justify-between h-full pr-0 lg:pr-12">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-[-0.03em] leading-[0.9] mb-4 md:mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.04em] leading-[0.85] mb-4 md:mb-6 font-display">
               <div className="min-h-[2.1em] md:min-h-[2.1em] flex items-end mb-4">
                 <TypewriterText />
               </div>
               
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl leading-[1] mt-2">
+              <div className="text-white text-4xl sm:text-5xl md:text-6xl leading-[1] mt-2 font-display">
                 для роста<br/>Вашего Бизнеса
               </div>
             </h1>
 
-            <p className="text-graphite-300 text-base md:text-lg max-w-xl mb-6 leading-relaxed font-light">
+            <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-6 leading-relaxed font-normal font-body">
               Мы строим сайты и продвижение как единую систему роста: 
               от первого клика до заявки в CRM, прозрачной воронки и измеримого результата.
             </p>
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="flex flex-col gap-8 md:gap-10">
             <div className="">
               {/* Service Tags Moved Here */}
-              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] sm:text-[11px] font-bold text-emerald-500/80 tracking-[0.2em] uppercase">
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] sm:text-[11px] font-bold text-emerald-500/80 tracking-[0.2em] uppercase font-mono">
                  <span>Сайты</span> <span>•</span>
                  <span>SEO</span> <span>•</span>
                  <span>Performance</span> <span>•</span>
@@ -130,8 +130,8 @@ export default function Home() {
           <BentoCard colSpan={2} className="bg-white/[0.03] border-white/10 lg:row-span-1">
             <div className="flex h-full items-end justify-between relative z-10 w-full">
               <div className="max-w-[70%]">
-                <h3 className="text-3xl font-medium tracking-tight mb-2 text-white">SEO как актив</h3>
-                <p className="text-graphite-400 text-xs leading-relaxed max-w-sm">
+                <h3 className="text-3xl font-bold tracking-tight mb-2 text-white font-display">SEO как актив</h3>
+                <p className="text-graphite-400 text-xs leading-relaxed max-w-sm font-body">
                   Строим устойчивый поисковый трафик, который работает годами без постоянных вливаний.
                 </p>
               </div>
@@ -159,9 +159,9 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex items-center gap-4 text-emerald-400">
                 <div className="bg-emerald-500/10 p-3 rounded-2xl"><ShieldCheck size={28} /></div>
-                <h4 className="font-semibold text-xl text-white">Вам к нам, если:</h4>
+                <h4 className="font-bold text-xl text-white font-display uppercase tracking-wider">Вам к нам, если:</h4>
               </div>
-              <ul className="space-y-5 text-graphite-300">
+              <ul className="space-y-5 text-graphite-300 font-body">
                 <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> Нужны готовые заявки и рост, а не просто картинка</li>
                 <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> У вас есть или строится настоящий отдел продаж</li>
                 <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> Хотите видеть сквозной результат в своей CRM</li>
@@ -184,8 +184,8 @@ export default function Home() {
       {/* PRINCIPLES */}
       <section className="scroll-reveal -mx-4 px-4 sm:mx-0 sm:px-0">
         <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">В чём наша разница</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight">Мы не просто агентство.<br className="hidden md:block"/> Мы выстраиваем систему.</h3>
+          <h2 className="text-xs font-black tracking-widest text-graphite-500 uppercase mb-4 font-mono">В чём наша разница</h2>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight font-display leading-[1.2]">Мы не просто агентство.<br className="hidden md:block"/> Мы выстраиваем систему.</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BentoCard>
@@ -229,63 +229,139 @@ export default function Home() {
 
       {/* SCHEMA */}
       <section className="relative scroll-reveal mt-32 mb-32">
-        <div className="liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] py-12 md:py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden transform-gpu">
-          <div className="text-center mb-16 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Как выглядит система роста</h2>
+        <div className="bg-[#050505] backdrop-blur-3xl border border-white/[0.05] rounded-[3.5rem] md:rounded-[5rem] py-14 md:py-20 px-8 sm:px-12 lg:px-20 relative overflow-hidden transform-gpu flex flex-col items-center">
+          {/* Ambient Glow - Centered on steps, very soft */}
+          <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[40%] bg-emerald-500/[0.05] blur-[140px] rounded-full pointer-events-none"></div>
+          
+          <div className="text-center mb-10 md:mb-16 relative z-10 w-full">
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-white leading-tight font-display">Как выглядит система роста</h2>
           </div>
           
-          <div className="relative max-w-5xl mx-auto hidden lg:block">
-            <div className="absolute top-[50%] left-[5%] right-[5%] h-[2px] bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent -translate-y-1/2"></div>
-            <div className="flex justify-between items-center relative z-10 w-full px-4">
-              {['Сайт', 'Заявка', 'CRM', 'Воронка продаж', 'Аналитика', 'Оптимизация'].map((step, i) => (
-                <React.Fragment key={step}>
-                  <div className="bg-graphite-950/80 backdrop-blur-md border border-white/10 px-6 py-4 rounded-full text-graphite-300 font-medium text-sm lg:text-base shrink-0 shadow-[0_4px_24px_rgba(0,0,0,0.6)] hover:-translate-y-1 hover:border-white/20 hover:text-white transition-all">
-                    {step}
+          {/* Desktop Sequence - Exactly matching the screenshot pill layout */}
+          <div className="relative w-full max-w-7xl mx-auto hidden lg:block overflow-visible px-4">
+            <div className="flex justify-between items-center relative z-10 w-full gap-2">
+              {[
+                { name: 'Сайт' },
+                { name: 'Заявка' },
+                { name: 'CRM' },
+                { name: 'Воронка продаж' },
+                { name: 'Аналитика' },
+                { name: 'Оптимизация' },
+                { name: 'Рост', highlight: true }
+              ].map((step, i, arr) => (
+                <React.Fragment key={step.name}>
+                  <div className={`
+                    relative px-9 py-4 rounded-full font-bold text-[15px] shrink-0 
+                    transition-all duration-700 cursor-default group/pill font-mono
+                    ${step.highlight 
+                      ? 'bg-[#0A100C] border border-emerald-500/70 text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.15)] ring-1 ring-emerald-500/20' 
+                      : 'bg-[#111111] border border-white/[0.05] text-white/70 shadow-xl'
+                    }
+                  `}>
+                    <div className={`absolute inset-0 rounded-full transition-opacity duration-500 opacity-0 group-hover/pill:opacity-100 ${step.highlight ? 'bg-emerald-500/5' : 'bg-white/5'}`}></div>
+                    <span className="relative z-10 tracking-[0.05em] uppercase text-[12px]">{step.name}</span>
                   </div>
-                  <ArrowRight className="text-emerald-500/50 shrink-0" size={18} />
+                  
+                  {i < arr.length - 1 && (
+                    <div className="flex-1 flex justify-center px-1 min-w-[20px]">
+                      <svg width="40" height="8" viewBox="0 0 40 8" fill="none" className="overflow-visible opacity-50 group-hover:opacity-100 transition-all duration-700">
+                        <path 
+                          d="M0 4H36" 
+                          stroke="#10B981" 
+                          strokeWidth="1" 
+                          strokeDasharray="2 3" 
+                          className="animate-flow-dash" 
+                        />
+                        <path 
+                          d="M32 0L36 4L32 8" 
+                          stroke="#10B981" 
+                          strokeWidth="1" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                        />
+                      </svg>
+                    </div>
+                  )}
                 </React.Fragment>
               ))}
-              <div className="bg-emerald-500/10 backdrop-blur-md border border-emerald-500/30 px-8 py-4 rounded-full text-emerald-400 font-semibold text-sm lg:text-base shrink-0 shadow-[0_0_30px_rgba(16,185,129,0.15)] glow-pulse">
-                Рост
-              </div>
             </div>
           </div>
           
-          <div className="lg:hidden flex flex-col items-center gap-4 relative z-10">
-              {['Сайт', 'Заявка', 'CRM', 'Воронка продаж', 'Аналитика', 'Оптимизация'].map((step, i) => (
-                <React.Fragment key={step}>
-                  <div className="bg-graphite-950/80 backdrop-blur-md border border-white/10 px-6 py-3 rounded-full text-graphite-300 font-medium text-base w-[80%] text-center shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
-                    {step}
+          {/* Mobile Sequence - Vertical stacked with refined paths */}
+          <div className="lg:hidden flex flex-col items-center gap-4 relative z-10 w-full max-w-[280px]">
+              {[
+                { name: 'Сайт' },
+                { name: 'Заявка' },
+                { name: 'CRM' },
+                { name: 'Воронка продаж' },
+                { name: 'Аналитика' },
+                { name: 'Оптимизация' },
+                { name: 'Рост', highlight: true }
+              ].map((step, i, arr) => (
+                <React.Fragment key={step.name}>
+                  <div className={`px-10 py-4 rounded-full font-medium text-base text-center w-full transition-all duration-500 ${
+                    step.highlight 
+                    ? 'bg-[#0A100C] border border-emerald-500/70 text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.15)]' 
+                    : 'bg-[#111111] border border-white/[0.05] text-white/70 shadow-lg'
+                  }`}>
+                    {step.name}
                   </div>
-                  <ArrowRight className="text-emerald-500/50 rotate-90" size={20} />
+                  {i < arr.length - 1 && (
+                    <div className="py-2">
+                      <svg width="8" height="24" viewBox="0 0 8 24" fill="none" className="overflow-visible opacity-40">
+                        <path 
+                          d="M4 0V20" 
+                          stroke="#10B981" 
+                          strokeWidth="1" 
+                          strokeDasharray="2 3" 
+                          className="animate-flow-dash-vertical" 
+                        />
+                        <path d="M0 16L4 20L8 16" stroke="#10B981" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  )}
                 </React.Fragment>
               ))}
-              <div className="bg-emerald-500/10 backdrop-blur-md border border-emerald-500/30 px-8 py-4 rounded-full text-emerald-400 font-semibold text-lg w-[80%] text-center shadow-[0_0_30px_rgba(16,185,129,0.15)] glow-pulse">
-                Рост
-              </div>
           </div>
           
-          <div className="text-center mt-16 max-w-2xl mx-auto px-4 relative z-10">
-            <p className="text-graphite-400 text-lg md:text-xl leading-relaxed font-light">
-              Он измеряется не трафиком, а управляемыми заявками и конверсией.
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto mt-12 liquid-glass-card rounded-3xl p-8 lg:p-12 relative z-10 text-center font-light text-graphite-400">
-              <div className="text-6xl text-emerald-500/20 absolute top-2 left-6 leading-none">"</div>
-              <p className="text-lg md:text-xl italic leading-relaxed relative z-10">
-                Если вы не можете описать то, что вы делаете, как процесс, вы не знаете, что вы делаете.
-              </p>
-              <div className="mt-6 text-emerald-500 font-medium text-sm md:text-base">— Уильям Эдвардс Деминг</div>
+          {/* Quote Section - Pill-like box mirroring the screenshot's shape and spacing */}
+          <div className="w-full max-w-5xl mx-auto mt-12 md:mt-16 relative z-10">
+             <div className="bg-gradient-to-b from-emerald-500/10 to-[#111111]/40 border border-white/[0.05] rounded-[3.5rem] md:rounded-[4.5rem] p-10 md:p-12 backdrop-blur-sm relative overflow-hidden group">
+                <p className="text-xl md:text-2xl lg:text-[28px] font-normal leading-tight text-white/80 text-center tracking-tight">
+                  Если вы не можете описать то, что вы делаете, как процесс — вы не знаете, что вы делаете.
+                </p>
+                <div className="mt-8 flex flex-col items-center gap-2">
+                  <div className="text-emerald-500 font-medium text-sm md:text-base tracking-wide opacity-80">
+                    — Уильям Эдвардс Деминг
+                  </div>
+                </div>
+             </div>
           </div>
         </div>
+
+        <style>{`
+          @keyframes flow-dash {
+            from { stroke-dashoffset: 5; }
+            to { stroke-dashoffset: 0; }
+          }
+          @keyframes flow-dash-vertical {
+            from { stroke-dashoffset: 5; }
+            to { stroke-dashoffset: 0; }
+          }
+          .animate-flow-dash {
+            animation: flow-dash 1.2s linear infinite;
+          }
+          .animate-flow-dash-vertical {
+            animation: flow-dash-vertical 1.2s linear infinite;
+          }
+        `}</style>
       </section>
 
       {/* DIRECTIONS */}
       <section className="scroll-reveal">
         <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">Направления</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight">Что мы строим для бизнеса</h3>
+          <h2 className="text-xs font-black tracking-[0.3em] text-graphite-500 uppercase mb-4 font-mono">Направления</h2>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight font-display leading-[1.2]">Что мы строим для бизнеса</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[280px]">
@@ -477,16 +553,16 @@ export default function Home() {
       <section className="mt-16 md:mt-32 bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 scroll-reveal">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none mix-blend-screen"></div>
         <div className="absolute top-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-full bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-3xl mb-6 md:mb-8 relative z-10">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-4xl mb-6 md:mb-8 relative z-10 font-display">
           Если вам нужен маркетинг, который работает — давайте обсудим задачу
         </h2>
-        <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-2xl relative z-10 font-light">
+        <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-2xl relative z-10 font-normal font-body leading-relaxed">
           Коротко опишите продукт и цель — мы предложим логику системы и первые шаги.<br/>
           Без “пакетов” и лишних обещаний.
         </p>
         <button 
           onClick={openContactModal}
-          className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-semibold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98]"
+          className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98] font-display"
         >
           <span className="flex items-center gap-3">
             Обсудить задачу <ArrowRight size={22} />

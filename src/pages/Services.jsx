@@ -77,12 +77,12 @@ export default function Services() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Системные решения</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.04em] leading-[1.05] mb-6 md:mb-8 text-white font-display">
             Услуги, которые <br/>
             помогают бизнесу <br/>
             <span className="text-emerald-500 italic">получать заявки и расти</span>
           </h1>
-          <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-light">
+          <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-normal font-body">
             Мы создаём для бизнеса понятную и рабочую систему привлечения: 
             сайт, SEO, платный трафик, CRM, аналитика и автоматизация. 
             Подбираем и выстраиваем именно те решения, которые помогают получать обращения, видеть результат и усиливать рост.
@@ -164,8 +164,8 @@ export default function Services() {
       {/* BLOCK 2: INTRO */}
       <section className="reveal-section max-w-5xl mx-auto py-12">
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-sm font-bold tracking-[0.3em] text-graphite-500 uppercase">Что мы делаем</h2>
-          <h3 className="text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight">
+          <h2 className="text-xs font-black tracking-[0.4em] text-graphite-500 uppercase font-mono">Что мы делаем</h2>
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.2] font-display">
             У каждого бизнеса <br/>
             <span className="text-emerald-500 italic">своя точка роста</span>
           </h3>
@@ -187,7 +187,7 @@ export default function Services() {
       {/* BLOCK 3: SERVICES GRID */}
       <section className="reveal-section">
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium text-white mb-2">Основные направления</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 font-display">Основные направления</h2>
         </div>
         
         <div className="services-grid grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto]">
@@ -590,17 +590,17 @@ export default function Services() {
       <section className="reveal-section relative bg-graphite-900 rounded-[1.5rem] md:rounded-[4rem] p-6 sm:p-8 md:p-16 lg:p-32 text-center flex flex-col items-center overflow-hidden border border-white/5 shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/15 via-transparent to-transparent pointer-events-none"></div>
         
-        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.05] max-w-5xl mb-8 md:mb-12 relative z-10 text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] max-w-5xl mb-8 md:mb-12 relative z-10 text-white font-display">
           Подберём решения под вашу задачу <br/>
           и соберём <span className="text-emerald-500">рабочую систему роста</span>
         </h2>
-        <p className="text-graphite-400 text-lg md:text-2xl mb-16 max-w-3xl relative z-10 font-light leading-relaxed">
+        <p className="text-graphite-400 text-lg md:text-2xl mb-16 max-w-3xl relative z-10 font-normal leading-relaxed font-body">
           Расскажите, какой у вас бизнес, что уже работает и какой результат вы хотите получить. 
           Мы предложим понятную логику действий и поможем выстроить маркетинг так, чтобы он давал опору для роста.
         </p>
         <button 
           onClick={openContactModal}
-          className="group relative z-10 px-14 py-7 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.05] shadow-[0_0_80px_rgba(16,185,129,0.3)] active:scale-[0.98]"
+          className="group relative z-10 px-14 py-7 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.05] shadow-[0_0_80px_rgba(16,185,129,0.3)] active:scale-[0.98] font-display"
         >
            <span className="relative flex items-center gap-4">
               Обсудить задачу <ArrowRight size={28} className="text-emerald-500 group-hover:translate-x-2 transition-transform" />

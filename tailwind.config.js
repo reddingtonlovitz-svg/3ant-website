@@ -26,6 +26,9 @@ module.exports = {
         }
       },
       fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
         sans: ['Inter', 'sans-serif'],
       },
     },

@@ -17,25 +17,25 @@ const ContactInfo = memo(() => {
           <span className="w-10 h-[1px] bg-emerald-500/50"></span>
           <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Связь с нами</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.04em] leading-[1.05] text-white font-display">
           Контакты
         </h1>
-        <p className="text-graphite-300 text-lg md:text-xl max-w-md leading-relaxed font-light">
+        <p className="text-graphite-300 text-lg md:text-xl max-w-md leading-relaxed font-normal font-body">
           Свяжитесь с нами, если вам нужен сайт, SEO, CRM, аналитика или выстроенная система привлечения заявок.
         </p>
-        <p className="text-graphite-400 text-base leading-relaxed opacity-80">
+        <p className="text-graphite-400 text-base leading-relaxed opacity-80 font-normal font-body">
           Коротко разберём задачу и предложим понятную логику работы.
         </p>
       </div>
 
       <div className="space-y-8 pt-8 border-t border-white/5">
-        <a href="tel:89137154800" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
+        <a href="tel:89137154800" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-bold text-white hover:text-emerald-500 transition-colors duration-300 font-display tracking-tight">
           <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all">
             <Phone size={28} className="text-emerald-500" />
           </div>
           8 (913) 715-48-00
         </a>
-        <a href="mailto:ab4800@yandex.ru" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-medium text-white hover:text-emerald-500 transition-colors duration-300">
+        <a href="mailto:ab4800@yandex.ru" className="group flex items-center gap-4 md:gap-6 text-lg sm:text-xl md:text-3xl font-bold text-white hover:text-emerald-500 transition-colors duration-300 font-display tracking-tight">
           <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all">
             <Mail size={28} className="text-emerald-500" />
           </div>

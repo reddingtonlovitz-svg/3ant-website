@@ -86,12 +86,12 @@ export default function Approach() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Наш подход</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.04em] leading-[1.05] mb-6 md:mb-8 text-white font-display">
             Маркетинг как <br/>
             <span className="text-emerald-500 italic block my-2">единую систему</span>
             <span className="text-graphite-400">сильного бизнеса</span>
           </h1>
-          <p className="text-graphite-300 text-lg md:text-xl max-w-lg mb-12 leading-relaxed font-light">
+          <p className="text-graphite-300 text-lg md:text-xl max-w-lg mb-12 leading-relaxed font-normal font-body">
             Сайт, трафик, CRM, аналитика и обработка заявок должны работать вместе. 
             Мы строим именно такие связки для измеримого результата.
           </p>
@@ -109,44 +109,72 @@ export default function Approach() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-fr">
-          <div className="bento-card relative overflow-hidden liquid-glass-card rounded-[2.5rem] p-8 border border-white/10 bg-white/[0.02] flex flex-col group hover:bg-white/[0.04] transition-all duration-500">
+          <BentoCard noOverflow={true} className="border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
-            <div className="relative z-10">
-               <div className="mb-6 w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.1)] group-hover:scale-110 group-hover:shadow-emerald-500/20 transition-all duration-500">
-                  <ShieldCheck size={30} />
+            
+            <div className="relative z-20 flex flex-col h-full">
+               <div className="mb-10 w-16 h-16 relative">
+                  <img 
+                    src="/images/approach/safe-growth-nobg.png" 
+                    alt="Safe Growth" 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] max-w-none opacity-90 group-hover:opacity-100 transition-all duration-700 pointer-events-none parallax mix-blend-screen contrast-[1.1]"
+                    data-rotation="5"
+                    style={{ 
+                      maskImage: 'radial-gradient(circle, black 50%, transparent 95%)', 
+                      WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)' 
+                    }}
+                  />
                </div>
-               <h3 className="text-2xl font-medium text-white mb-3 tracking-tight">Безопасный рост</h3>
-               <p className="text-graphite-400 text-sm leading-relaxed font-light">Прозрачность каждого шага и контроль рисков.</p>
+               <h3 className="text-2xl font-bold text-white mb-3 tracking-tight font-display">Безопасный рост</h3>
+               <p className="text-graphite-400 text-sm leading-relaxed font-normal font-body">Прозрачность каждого шага и контроль рисков.</p>
             </div>
-          </div>
+          </BentoCard>
 
-          <div className="bento-card relative overflow-hidden liquid-glass-card rounded-[2.5rem] p-8 border border-white/10 bg-white/[0.02] flex flex-col group hover:bg-white/[0.04] transition-all duration-500">
+          <BentoCard noOverflow={true} className="border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
-            <div className="relative z-10">
-               <div className="mb-6 w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.1)] group-hover:scale-110 group-hover:shadow-emerald-500/20 transition-all duration-500">
-                  <Activity size={30} />
+            
+            <div className="relative z-20 flex flex-col h-full">
+               <div className="mb-10 w-16 h-16 relative">
+                  <img 
+                    src="/images/approach/data-driven-nobg.png" 
+                    alt="Data Driven" 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] max-w-none opacity-90 group-hover:opacity-100 transition-all duration-700 pointer-events-none parallax mix-blend-screen contrast-[1.1]"
+                    data-rotation="-8"
+                    style={{ 
+                      maskImage: 'radial-gradient(circle, black 50%, transparent 95%)', 
+                      WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)' 
+                    }}
+                  />
                </div>
-               <h3 className="text-2xl font-medium text-white mb-3 tracking-tight">Data-driven</h3>
-               <p className="text-graphite-400 text-sm leading-relaxed font-light">Принимаем решения на основе цифр, а не интуиции.</p>
+               <h3 className="text-2xl font-bold text-white mb-3 tracking-tight font-display">Data-driven</h3>
+               <p className="text-graphite-400 text-sm leading-relaxed font-normal font-body">Принимаем решения на основе цифр, а не интуиции.</p>
             </div>
-          </div>
+          </BentoCard>
 
-          <div className="bento-card col-span-1 sm:col-span-2 relative overflow-hidden liquid-glass-card rounded-[2.5rem] p-8 md:p-12 border border-white/10 bg-white/[0.02] flex flex-col md:flex-row md:items-center gap-8 group hover:bg-white/[0.04] transition-all duration-500">
+          <BentoCard noOverflow={true} colSpan={2} className="p-8 md:p-12 border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
-            <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-10 w-full">
-               <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shadow-[0_0_40px_rgba(16,185,129,0.15)] group-hover:scale-110 group-hover:shadow-emerald-500/25 transition-all duration-500">
-                  <Target size={36} />
+            
+            <div className="relative z-20 flex flex-col md:flex-row md:items-center gap-12 w-full">
+               <div className="w-20 h-20 md:w-28 md:h-28 shrink-0 relative">
+                  <img 
+                    src="/images/approach/systemic-view-nobg.png" 
+                    alt="Systemic View" 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] max-w-none opacity-80 group-hover:opacity-100 transition-all duration-700 pointer-events-none parallax mix-blend-screen contrast-[1.1]"
+                    data-rotation="12"
+                    style={{ 
+                      maskImage: 'radial-gradient(circle, black 50%, transparent 95%)', 
+                      WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)' 
+                    }}
+                  />
                </div>
                <div className="flex-1">
-                  <h3 className="text-3xl font-medium text-white mb-4 tracking-tight">Системный взгляд</h3>
-                  <p className="text-graphite-400 text-base md:text-lg leading-relaxed font-light max-w-2xl">
+                  <h3 className="text-3xl font-bold text-white mb-4 tracking-tight font-display">Системный взгляд</h3>
+                  <p className="text-graphite-400 text-base md:text-lg leading-relaxed font-normal font-body max-w-2xl">
                     Видим всю воронку целиком: от первого касания в поиске до продажи в CRM и LTV клиента.
                   </p>
                </div>
             </div>
-            {/* Pulsing decoration */}
-            <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] pointer-events-none animate-pulse"></div>
-          </div>
+          </BentoCard>
         </div>
       </section>
 
@@ -156,19 +184,19 @@ export default function Approach() {
           
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1.1fr] gap-12 lg:gap-16 items-start relative z-10">
             {/* COLUMN 1: TITLE */}
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white font-display">
               Мы начинаем <br/>
               <span className="text-emerald-500">не с инструментов,</span> <br/>
               а с задачи бизнеса
             </h2>
 
             {/* COLUMN 2: PRIMARY TEXT */}
-            <p className="text-graphite-300 text-lg md:text-xl leading-relaxed font-light">
-              Не каждый запрос <strong className="text-white font-medium">«нужен сайт»</strong> действительно про сайт. Иногда это запрос на системные продажи.
+            <p className="text-graphite-300 text-lg md:text-xl leading-relaxed font-normal font-body">
+              Не каждый запрос <strong className="text-white font-bold font-display tracking-tight">«нужен сайт»</strong> действительно про сайт. Иногда это запрос на системные продажи.
             </p>
 
             {/* COLUMN 3: SECONDARY TEXT */}
-            <p className="text-graphite-400 text-base md:text-lg leading-relaxed font-light">
+            <p className="text-graphite-400 text-base md:text-lg leading-relaxed font-normal font-body">
               Иногда проблема в структуре предложения. Иногда — в обработке лидов. Иногда — в том, что маркетинг и продажи существуют отдельно друг от друга.
             </p>
           </div>
@@ -177,8 +205,8 @@ export default function Approach() {
       {/* BLOCK 3: PILLARS - CLEANED UP ICONS */}
       <section className="reveal-section">
         <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">На чём строится наш подход</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight text-white mb-2">На чём строится наш подход</h3>
+          <h2 className="text-xs font-black tracking-[0.4em] text-graphite-500 uppercase mb-4 font-mono">На чём строится наш подход</h2>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white mb-2 font-display">На чём строится наш подход</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -325,15 +353,15 @@ export default function Approach() {
       <section className="bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 reveal-section">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none mix-blend-screen"></div>
         <div className="absolute top-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-full bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-4xl mb-6 md:mb-8 relative z-10 text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-4xl mb-6 md:mb-8 relative z-10 text-white font-display">
           Нам интересны проекты, где нужен не просто подрядчик, а <span className="text-emerald-500">внятная система роста</span>
         </h2>
-        <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-3xl relative z-10 font-light text-center">
+        <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-3xl relative z-10 font-normal text-center font-body leading-relaxed">
           Если вам важно не просто привлекать трафик, а выстроить связку между маркетингом, продажами и цифрами — давайте обсудим задачу.
         </p>
         <button 
           onClick={openContactModal}
-          className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-semibold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98]"
+          className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98] font-display"
         >
           <span className="flex items-center gap-3">
             Обсудить задачу <ArrowRight size={22} className="text-emerald-500" />

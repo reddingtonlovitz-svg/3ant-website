@@ -76,12 +76,12 @@ export default function Cases() {
             <span className="w-10 h-[1px] bg-emerald-500/50"></span>
             <span className="text-sm font-bold tracking-[0.2em] text-emerald-500 uppercase">Портфолио проектов</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[1.05] mb-6 md:mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.04em] leading-[1.05] mb-6 md:mb-8 text-white font-display">
             Кейсы, в которых <br/>
             маркетинг связан с <br/>
             <span className="text-emerald-500 italic">продажами, CRM и результатом</span>
           </h1>
-          <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-light">
+          <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-normal font-body">
             Мы показываем не просто сайты, а реальные проекты, где выстроены точки входа, настроены источники заявок, подключена CRM, оцифрована воронка и запущено продвижение.
           </p>
           <div className="flex flex-wrap items-center gap-6">
@@ -152,8 +152,8 @@ export default function Cases() {
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.02] to-transparent pointer-events-none"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-5xl font-medium text-white mb-8 tracking-tight">Что входит в наши кейсы</h2>
-            <p className="text-graphite-400 text-lg font-light leading-relaxed mb-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight font-display">Что входит в наши кейсы</h2>
+            <p className="text-graphite-400 text-lg font-normal leading-relaxed mb-10 font-body">
               Каждый проект — это не только сайт. <br/><br/>
               Это связка из структуры, SEO, источников заявок, CRM, аналитики, работы с отделом продаж и дальнейшего развития по регионам и направлениям.
             </p>
@@ -215,8 +215,8 @@ export default function Cases() {
       <section className="space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-section">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-medium text-white mb-6 tracking-tight">Реализованные проекты</h2>
-            <p className="text-graphite-400 text-lg font-light leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight font-display">Реализованные проекты</h2>
+            <p className="text-graphite-400 text-lg font-normal leading-relaxed font-body">
               В каждом кейсе — не отдельный инструмент, а рабочая система привлечения и обработки обращений.
             </p>
           </div>
@@ -241,22 +241,22 @@ export default function Cases() {
                              <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                              <span>SPB REGION</span>
                           </div>
-                          <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight underline decoration-emerald-500/30 decoration-2 underline-offset-8">
+                          <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight underline decoration-emerald-500/30 decoration-2 underline-offset-8 font-display">
                             Металлобаза Волхонка
                           </h3>
-                          <a href="https://metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
+                          <a href="https://metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg font-mono">
                             metallobazav.ru <ExternalLink size={16} />
                           </a>
                        </div>
                     </div>
                    
-                   <p className="text-graphite-300 text-lg font-light leading-relaxed">
+                   <p className="text-graphite-300 text-lg font-normal leading-relaxed font-body">
                      Комплексная цифровая система для металлобазы: сайт, SEO, Bitrix24, источники заявок, воронки продаж и работа с отделом продаж.
                    </p>
 
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-4">
-                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-2">
+                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-2 font-mono">
                            <Layout size={14} /> Что было сделано
                          </h4>
                          <ul className="space-y-2 text-sm text-graphite-400 leading-relaxed list-inside">
@@ -269,7 +269,7 @@ export default function Cases() {
                          </ul>
                       </div>
                       <div className="space-y-4">
-                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-white flex items-center gap-2">
+                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-white flex items-center gap-2 font-mono">
                            <TrendingUp size={14} /> Результат
                          </h4>
                          <ul className="space-y-2 text-sm text-graphite-400 leading-relaxed">
@@ -301,11 +301,11 @@ export default function Cases() {
                    <div className="grid grid-cols-2 gap-8">
                       <div className="aspect-[4/3] relative rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.02] group/crm">
                          <img src="/images/cases/volkhonka/crm.png" alt="Bitrix24 CRM Flow" className="absolute inset-0 w-full h-full object-cover group-hover/crm:scale-110 transition-transform duration-700" />
-                         <div className="absolute bottom-6 left-6 text-[10px] font-bold text-blue-400 uppercase tracking-widest">Bitrix24 CRM Система</div>
+                         <div className="absolute bottom-6 left-6 text-[10px] font-bold text-blue-400 uppercase tracking-widest font-mono">Bitrix24 CRM Система</div>
                       </div>
                       <div className="aspect-[4/3] relative rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.02] group/seo">
                          <img src="/images/cases/volkhonka/seo.png" alt="SEO Visibility" className="absolute inset-0 w-full h-full object-cover group-hover/seo:scale-110 transition-transform duration-700" />
-                         <div className="absolute bottom-6 left-6 text-[10px] font-bold text-emerald-400 uppercase tracking-widest">SEO Видимость</div>
+                         <div className="absolute bottom-6 left-6 text-[10px] font-bold text-emerald-400 uppercase tracking-widest font-mono">SEO Видимость</div>
                       </div>
                    </div>
                 </div>
@@ -329,21 +329,21 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>MOSCOW EXPANSION</span>
                       </div>
-                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display">
                          Металлобаза Волхонка — МСК
                       </h3>
-                      <a href="https://msk.metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
+                      <a href="https://msk.metallobazav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg font-mono">
                         msk.metallobazav.ru <ExternalLink size={16} />
                       </a>
                    </div>
                    
-                   <p className="text-graphite-300 text-lg font-light leading-relaxed">
+                   <p className="text-graphite-300 text-lg font-normal leading-relaxed font-body">
                      Запуск отдельного регионального проекта под Москву: новый сайт, CRM-интеграции, источники заявок и развитие SEO по региону.
                    </p>
 
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-4">
-                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-2">
+                         <h4 className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-2 font-mono">
                            <Layout size={14} /> Что было сделано
                          </h4>
                          <ul className="space-y-2 text-sm text-graphite-400 leading-relaxed list-inside">
@@ -416,7 +416,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>COMPLEX B2B</span>
                       </div>
-                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display">
                          ОборонСпецСплав
                       </h3>
                       <a href="https://oboronspecsplav.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -503,7 +503,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>FROM ZERO TO FLOW</span>
                       </div>
-                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display">
                          ПрофЛайн
                       </h3>
                       <a href="https://profnastils.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -580,7 +580,7 @@ export default function Cases() {
                          <span className="w-8 h-[1px] bg-emerald-500/30"></span>
                          <span>INDUSTRIAL STARTUP</span>
                       </div>
-                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display">
                          БЛТ Абразив
                       </h3>
                       <a href="https://blt-abraziv.ru" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-graphite-400 hover:text-emerald-500 transition-colors text-lg">
@@ -649,8 +649,8 @@ export default function Cases() {
       <section className="reveal-section relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 overflow-hidden border border-white/10 bg-white/[0.01]">
          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-medium text-white mb-12 tracking-tight text-center">Что объединяет все проекты</h2>
-            <p className="text-graphite-300 text-xl font-light leading-relaxed mb-16 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 tracking-tight text-center font-display">Что объединяет все проекты</h2>
+            <p className="text-graphite-300 text-xl font-normal leading-relaxed mb-16 text-center font-body">
                Во всех кейсах мы строим не просто сайт, а рабочую систему:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -678,10 +678,10 @@ export default function Cases() {
       <section className="reveal-section py-24">
         <div className="liquid-glass-card rounded-[1.5rem] md:rounded-[4rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center relative overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-          <h2 className="text-3xl md:text-6xl font-medium text-white mb-8 tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-6xl font-extrabold text-white mb-8 tracking-tight max-w-4xl mx-auto font-display">
             Если вам нужен не просто сайт, а рабочая система привлечения заявок — <span className="text-emerald-500 italic">обсудим задачу</span>
           </h2>
-          <p className="text-graphite-400 text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light leading-relaxed">
+          <p className="text-graphite-400 text-lg md:text-xl max-w-2xl mx-auto mb-16 font-normal leading-relaxed font-body">
             Разберем, что нужно именно вашему бизнесу: создание сайта, SEO, Bitrix24, настройка источников, аналитика, автоматизация или выстраивание всей связки целиком.
           </p>
           <button 

@@ -81,18 +81,19 @@ export const MicroUIStyles = () => (
       -webkit-backdrop-filter: blur(32px);
       contain: layout style paint;
       
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-right-color: rgba(255, 255, 255, 0.03);
-      border-bottom-color: rgba(255, 255, 255, 0.03);
+      h3, h4 {
+        font-family: var(--font-heading);
+      }
     }
   `}</style>
 );
 
-export const BentoCard = ({ children, className, colSpan = 1, rowSpan = 1 }) => {
+export const BentoCard = ({ children, className, colSpan = 1, rowSpan = 1, noOverflow = false }) => {
   return (
     <div 
       className={clsx(
-        "group bento-card relative liquid-glass-card rounded-[2.5rem] p-8 flex flex-col justify-between hover:-translate-y-1 overflow-hidden transform-gpu will-change-transform backface-visibility-hidden",
+        "group bento-card relative liquid-glass-card rounded-[2.5rem] p-8 flex flex-col justify-between hover:-translate-y-1 transform-gpu will-change-transform backface-visibility-hidden",
+        !noOverflow && "overflow-hidden",
         className,
         {
           'md:col-span-2': colSpan === 2,
@@ -150,7 +151,7 @@ export const TypewriterText = () => {
   }, [text, isDeleting, index, isWaiting]);
 
   return (
-    <span className="text-emerald-500 whitespace-pre-line">
+    <span className="text-emerald-500 whitespace-pre-line font-display leading-[1.1]">
       {text}
       <span className="inline-block w-[2px] md:w-[4px] h-[0.8em] bg-emerald-500 ml-1 sm:ml-2 opacity-80 animate-[pulse_1s_step-end_infinite] translate-y-[0.1em]"></span>
     </span>
@@ -213,7 +214,7 @@ export const SEOScanner = React.memo(() => (
 // NEW: Liquid Glass Tag (Non-clickable)
 export const LiquidGlassTag = ({ children, className }) => (
   <div className={clsx(
-    "relative px-6 py-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-medium tracking-wide transition-all duration-300 group ring-1 ring-emerald-500/0 hover:ring-emerald-500/40 hover:bg-emerald-500/10 cursor-default select-none",
+    "relative px-6 py-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-bold tracking-widest uppercase font-mono transition-all duration-300 group ring-1 ring-emerald-500/0 hover:ring-emerald-500/40 hover:bg-emerald-500/10 cursor-default select-none",
     className
   )}>
     <div className="absolute inset-0 bg-emerald-500/5 blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -221,7 +222,6 @@ export const LiquidGlassTag = ({ children, className }) => (
   </div>
 );
 
-// NEW: Liquid Glass Button (Clickable CTA)
 export const LiquidGlassButton = ({ children, className, ...props }) => (
   <button 
     className={clsx(
@@ -232,7 +232,7 @@ export const LiquidGlassButton = ({ children, className, ...props }) => (
   >
     <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     <div className="absolute inset-0 bg-emerald-500/10 pointer-events-none translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-    <span className="relative z-10 flex items-center justify-center gap-3">
+    <span className="relative z-10 flex items-center justify-center gap-3 font-display">
       {children}
     </span>
   </button>
