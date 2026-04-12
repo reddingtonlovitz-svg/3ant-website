@@ -367,13 +367,15 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[280px]">
           <BentoCard className="md:col-span-3">
             <div className="h-full flex flex-col justify-between relative z-10">
-              <CursorClicker />
-              <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 mb-6 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                <MousePointerClick className="text-white" size={28}/>
+              <div className="flex items-start justify-between mb-6">
+                <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
+                  <MousePointerClick className="text-white" size={28}/>
+                </div>
+                <CursorClicker className="relative top-0 right-0" />
               </div>
               <div>
-                <h4 className="text-2xl font-medium mb-3">Сайты под лидогенерацию</h4>
-                <p className="text-graphite-400 leading-relaxed group-hover:text-graphite-300 transition-colors">
+                <h4 className="text-2xl font-bold mb-3 font-display">Сайты под лидогенерацию</h4>
+                <p className="text-graphite-400 leading-relaxed font-body group-hover:text-graphite-300 transition-colors">
                   Проектируем структуру, логику и интерфейсы, которые доводят посетителя до обращения.
                 </p>
               </div>
@@ -382,13 +384,15 @@ export default function Home() {
 
           <BentoCard className="md:col-span-3">
             <div className="h-full flex flex-col justify-between relative z-10">
-              <SEOScanner />
-              <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 mb-6 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                <Search className="text-white" size={28}/>
+              <div className="flex items-start justify-between mb-6">
+                <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
+                  <Search className="text-white" size={28}/>
+                </div>
+                <SEOScanner className="relative top-0 right-0" />
               </div>
               <div>
-                <h4 className="text-2xl font-medium mb-3">SEO как актив</h4>
-                <p className="text-graphite-400 leading-relaxed group-hover:text-graphite-300 transition-colors">
+                <h4 className="text-2xl font-bold mb-3 font-display">SEO как актив</h4>
+                <p className="text-graphite-400 leading-relaxed font-body group-hover:text-graphite-300 transition-colors">
                   Делаем поисковое продвижение системно: архитектура, контент, внутренняя оптимизация, рост спроса.
                 </p>
               </div>
@@ -397,13 +401,15 @@ export default function Home() {
 
           <BentoCard className="md:col-span-2">
               <div className="h-full flex flex-col justify-between relative z-10">
-                <TelemetryGraph />
-                <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 mb-6 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                  <Activity className="text-white" size={24}/>
+                <div className="flex items-start justify-between mb-6">
+                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
+                    <Activity className="text-white" size={24}/>
+                  </div>
+                  <TelemetryGraph className="relative top-0 right-0" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium mb-3">Performance-маркетинг</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed">
+                  <h4 className="text-xl font-bold mb-3 font-display">Performance-маркетинг</h4>
+                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
                     Запускаем и оптимизируем платный трафик там, где он усиливает систему: Директ, Avito, VK.
                   </p>
                 </div>
@@ -412,13 +418,15 @@ export default function Home() {
 
           <BentoCard className="md:col-span-2">
               <div className="h-full flex flex-col justify-between relative z-10">
-                <CRMFunnel />
-                <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 mb-6 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                  <Database className="text-white" size={24}/>
+                <div className="flex items-start justify-between mb-6">
+                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
+                    <Database className="text-white" size={24}/>
+                  </div>
+                  <CRMFunnel className="relative top-0 right-0" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium mb-3">CRM и аналитика</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed">
+                  <h4 className="text-xl font-bold mb-3 font-display">CRM и аналитика</h4>
+                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
                     Интеграции, воронки, источники лидов, контроль обработки, отчётность и прозрачность.
                   </p>
                 </div>
@@ -427,13 +435,15 @@ export default function Home() {
           
           <BentoCard className="md:col-span-2">
               <div className="h-full flex flex-col justify-between relative z-10">
-                <NetworkNodes />
-                <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 mb-6 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                  <Settings className="text-white" size={24}/>
+                <div className="flex items-start justify-between mb-6">
+                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
+                    <Settings className="text-white" size={24}/>
+                  </div>
+                  <NetworkNodes className="relative top-0 right-0" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium mb-3">Автоматизация процессов</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed">
+                  <h4 className="text-xl font-bold mb-3 font-display">Автоматизация процессов</h4>
+                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
                     Интеграции и сценарии автоматизации, которые ускоряют маркетинг и разгружают команду.
                   </p>
                 </div>

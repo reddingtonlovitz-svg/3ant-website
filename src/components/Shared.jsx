@@ -158,8 +158,8 @@ export const TypewriterText = () => {
   );
 };
 
-export const TelemetryGraph = React.memo(() => (
-  <div className="absolute top-8 right-8 flex items-end gap-[3px] h-12 w-20 opacity-30 group-hover:opacity-80 transition-opacity duration-500 overflow-hidden">
+export const TelemetryGraph = React.memo(({ className }) => (
+  <div className={clsx("absolute top-8 right-8 flex items-end gap-[3px] h-12 w-20 opacity-30 group-hover:opacity-80 transition-opacity duration-500 overflow-hidden", className)}>
      <div className="w-3 rounded-t-[2px] bg-emerald-500 animate-[pulse_2s_ease-in-out_infinite]" style={{ height: '30%' }}></div>
      <div className="w-3 rounded-t-[2px] bg-emerald-500 animate-[pulse_2s_ease-in-out_infinite_0.2s]" style={{ height: '50%' }}></div>
      <div className="w-3 rounded-t-[2px] bg-emerald-500 animate-[pulse_2s_ease-in-out_infinite_0.4s]" style={{ height: '40%' }}></div>
@@ -168,8 +168,8 @@ export const TelemetryGraph = React.memo(() => (
   </div>
 ));
 
-export const CursorClicker = React.memo(() => (
-  <div className="absolute top-8 right-8 w-24 h-20 border border-white/10 rounded-lg bg-white/5 overflow-hidden opacity-30 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md">
+export const CursorClicker = React.memo(({ className }) => (
+  <div className={clsx("absolute top-8 right-8 w-24 h-20 border border-white/10 rounded-lg bg-white/5 overflow-hidden opacity-30 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md", className)}>
     <div className="absolute inset-x-2 top-2 h-2 bg-white/20 rounded-full"></div>
     <div className="absolute top-6 left-2 w-10 h-6 bg-emerald-500/20 rounded border border-emerald-500/50"></div>
     {/* Animated Cursor */}
@@ -179,8 +179,8 @@ export const CursorClicker = React.memo(() => (
   </div>
 ));
 
-export const CRMFunnel = React.memo(() => (
-  <div className="absolute top-8 right-8 flex flex-col items-center gap-[6px] opacity-30 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+export const CRMFunnel = React.memo(({ className }) => (
+  <div className={clsx("absolute top-8 right-8 flex flex-col items-center gap-[6px] opacity-30 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none", className)}>
     <div className="w-20 h-2 bg-white/20 rounded-full relative overflow-hidden">
       <div className="absolute inset-0 bg-white/40 w-1/2 animate-[pulse_1s_ease-in-out_infinite]"></div>
     </div>
@@ -193,15 +193,15 @@ export const CRMFunnel = React.memo(() => (
   </div>
 ));
 
-export const NetworkNodes = React.memo(() => (
-  <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-70 transition-opacity duration-500 animate-[spinSlow_20s_linear_infinite] pointer-events-none">
+export const NetworkNodes = React.memo(({ className }) => (
+  <div className={clsx("absolute top-4 right-4 opacity-20 group-hover:opacity-70 transition-opacity duration-500 animate-[spinSlow_20s_linear_infinite] pointer-events-none", className)}>
     <Settings size={64} className="text-emerald-500" />
     <Settings size={32} className="text-white absolute top-[-5px] right-[-5px] animate-[spinSlow_10s_linear_infinite_reverse]" />
   </div>
 ));
 
-export const SEOScanner = React.memo(() => (
-   <div className="absolute top-8 right-8 w-[100px] h-16 border-b border-white/20 opacity-30 group-hover:opacity-80 transition-opacity duration-500 overflow-hidden pointer-events-none">
+export const SEOScanner = React.memo(({ className }) => (
+   <div className={clsx("absolute top-8 right-8 w-[100px] h-16 border-b border-white/20 opacity-30 group-hover:opacity-80 transition-opacity duration-500 overflow-hidden pointer-events-none", className)}>
      <div className="w-full h-[1px] bg-emerald-400 shadow-[0_0_12px_#10B981] animate-[pulse_1.5s_linear_infinite] absolute z-10 translate-y-6"></div>
      <div className="flex gap-[2px] h-full items-end pb-1 px-1 opacity-50">
        {[30, 50, 40, 70, 60, 90, 80, 100].map((h, i) => (
