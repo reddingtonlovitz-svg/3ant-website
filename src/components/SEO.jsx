@@ -44,6 +44,9 @@ export const SEO = ({
 
       {/* Primary keywords and indexing directives (optional/classic) */}
       <meta name="robots" content="index, follow" />
+
+      {/* RSS Feed link */}
+      <link rel="alternate" type="application/rss+xml" title="3ant Agency Blog RSS" href="/rss.xml" />
     </Helmet>
   );
 };

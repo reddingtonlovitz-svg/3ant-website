@@ -13,6 +13,8 @@ const Home = lazy(() => import('./pages/Home'));
 const Approach = lazy(() => import('./pages/Approach'));
 const Services = lazy(() => import('./pages/Services'));
 const Cases = lazy(() => import('./pages/Cases'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contacts = lazy(() => import('./pages/Contacts'));
 
 export default function App() {
@@ -25,6 +27,8 @@ export default function App() {
             <Route path="approach" element={<Approach />} />
             <Route path="services" element={<Services />} />
             <Route path="cases" element={<Cases />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="contacts" element={<Contacts />} />
           </Route>
         </Routes>

@@ -51,14 +51,14 @@ export const Header = ({ onOpenContact }) => {
       <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${isScrolled ? 'py-3 bg-graphite-950/60 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'py-5 md:py-8 bg-transparent'}`}>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex justify-between items-center text-[15px] font-medium">
           <div className="flex items-center gap-12 lg:gap-16">
-            <NavLink to="/" className="text-xl font-bold tracking-tight uppercase relative z-[60]">3ant</NavLink>
+            <NavLink to="/" className="text-xl font-bold tracking-tight uppercase relative z-[60]">Агентство ABB</NavLink>
             
             {/* Desktop Nav */}
             <nav className="hidden lg:flex gap-8 lg:gap-10 text-graphite-300">
-              <NavLink to="/" className={isActive("/")}>Главная</NavLink>
               <NavLink to="/services" className={isActive("/services")}>Услуги</NavLink>
-              <NavLink to="/approach" className={isActive("/approach")}>Подход</NavLink>
+              <NavLink to="/approach" className={isActive("/approach")}>О компании</NavLink>
               <NavLink to="/cases" className={isActive("/cases")}>Кейсы</NavLink>
+              <NavLink to="/blog" className={isActive("/blog")}>Блог</NavLink>
               <NavLink to="/contacts" className={isActive("/contacts")}>Контакты</NavLink>
             </nav>
           </div>
@@ -95,10 +95,10 @@ export const Header = ({ onOpenContact }) => {
       >
         <nav ref={menuLinksRef} className="flex flex-col items-center gap-6 mb-12">
           {[
-            { to: '/', label: 'Главная' },
             { to: '/services', label: 'Услуги' },
-            { to: '/approach', label: 'Подход' },
+            { to: '/approach', label: 'О компании' },
             { to: '/cases', label: 'Кейсы' },
+            { to: '/blog', label: 'Блог' },
             { to: '/contacts', label: 'Контакты' },
           ].map((link) => (
             <NavLink
@@ -131,9 +131,10 @@ export const Header = ({ onOpenContact }) => {
 
 export const Footer = () => (
   <footer className="relative z-50 w-full max-w-[1400px] mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-graphite-500 text-sm border-t border-white/5 pb-16">
-    <div className="font-medium">© 2026 3ant. Маркетинговое агентство.</div>
+    <div className="font-medium">© 2026 Агентство ABB. Дизайн, сайты и маркетинг.</div>
     <div className="flex items-center gap-8 mt-6 md:mt-0 font-medium tracking-wide">
       <NavLink to="/cases" className="hover:text-white transition-colors">Кейсы</NavLink>
+      <NavLink to="/blog" className="hover:text-white transition-colors">Блог</NavLink>
       <NavLink to="/contacts" className="hover:text-white transition-colors">Контакты</NavLink>
       <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
     </div>

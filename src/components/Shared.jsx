@@ -110,12 +110,12 @@ export const BentoCard = ({ children, className, colSpan = 1, rowSpan = 1, noOve
 
 export const TypewriterText = () => {
   const phrases = [
+    "Агентство\nABB",
+    "Дизайн для\nбизнеса",
+    "Сайты под\nзадачи",
     "Системный\nмаркетинг",
-    "SEO\nпродвижение",
-    "Сайты\nпод заявки",
-    "CRM\nинтеграции",
-    "Performance\nмаркетинг",
-    "Маркетинг\nв цифрах"
+    "Бренд под\nключ",
+    "Рост в цифрах"
   ];
   const [index, setIndex] = useState(0);
   const [text, setText] = useState('');
@@ -236,4 +236,29 @@ export const LiquidGlassButton = ({ children, className, ...props }) => (
       {children}
     </span>
   </button>
+);
+export const TeamMemberCard = ({ name, role, description, photoUrl }) => (
+  <div className="group relative liquid-glass-card rounded-[2rem] p-8 flex flex-col gap-6 hover:-translate-y-1 transition-all duration-500 border border-white/5 hover:border-emerald-500/30">
+    <div className="flex items-center gap-5">
+      <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 overflow-hidden shrink-0 flex items-center justify-center">
+        {photoUrl ? (
+          <img src={photoUrl} alt={name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-emerald-500/20 to-transparent flex items-center justify-center">
+            <span className="text-emerald-500/40 font-bold text-xl uppercase">{name.charAt(0)}</span>
+          </div>
+        )}
+      </div>
+      <div>
+        <h4 className="text-xl font-bold text-white mb-1 font-display">{name}</h4>
+        <p className="text-emerald-500/80 text-xs font-bold tracking-widest uppercase font-mono">{role}</p>
+      </div>
+    </div>
+    <p className="text-graphite-400 text-sm leading-relaxed font-body">
+      {description}
+    </p>
+    <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+    </div>
+  </div>
 );

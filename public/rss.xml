@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+<channel>
+  <title>3ant Agency Blog</title>
+  <atom:link href="https://3ant.ru/rss.xml" rel="self" type="application/rss+xml" />
+  <link>https://3ant.ru</link>
+  <description>Экспертные статьи о маркетинге, SEO и автоматизации бизнеса от 3ant Agency.</description>
+  <lastBuildDate>Mon, 13 Apr 2026 19:02:07 GMT</lastBuildDate>
+  <language>ru-RU</language>
+  <sy:updatePeriod>hourly</sy:updatePeriod>
+  <sy:updateFrequency>1</sy:updateFrequency>
+  
+    <item>
+      <title>Digital-маркетинг для B2B в 2026 году: Тренды и стратегия</title>
+      <link>https://3ant.ru/blog/digital-marketing-for-b2b-2026</link>
+      <guid isPermaLink="true">https://3ant.ru/blog/digital-marketing-for-b2b-2026</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Как изменились подходы к привлечению сложных B2B-клиентов и почему стандартная реклама больше не приносит результат.</description>
+      <content:encoded><![CDATA[<p>Мир B2B-маркетинга претерпел значительные изменения за последние несколько лет. В 2026 году мы видим, что классические методы "холодных звонков" и прямой контекстной рекламы в лоб работают всё хуже.</p><h3>1. Фокус на экспертном контенте</h3><p>Клиент в B2B стал более избирательным. Он изучает вашу экспертность задолго до первого контакта. Статьи, кейсы и глубокая аналитика рынка становятся главными инструментами прогрева.</p><h3>2. Автоматизация и CRM-маркетинг</h3><p>Внедрение Bitrix24 или AMO CRM — это не просто хранилище контактов. Это инструмент для выстраивания долгосрочных отношений. Мы видим, как связка CRM + сквозная аналитика позволяет сократить стоимость лида на 30-40%.</p><h3>3. Видео-контент и личный бренд</h3><p>Люди покупают у людей. Демонстрация процессов, интервью с инженерами и экспертами компании через короткие видео-форматы повышают доверие в разы.</p><p>В нашем агентстве мы помогаем компаниям выстроить эту систему с нуля, начиная от архитектуры сайта и заканчивая полной оцифровкой воронки продаж.</p>]]></content:encoded>
+      <author>3ant Team</author>
+      <category>Стратегия</category>
+      <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" length="0" type="image/jpeg" />
+    </item>
+  
+    <item>
+      <title>Автоматизация SEO в промышленных нишах: Кейс на 800 000 товаров</title>
+      <link>https://3ant.ru/blog/seo-automation-case-study</link>
+      <guid isPermaLink="true">https://3ant.ru/blog/seo-automation-case-study</guid>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Опыт продвижения крупного каталога спецсталей. Как занять ТОП по тысячам низкочастотных запросов за 4 месяца.</description>
+      <content:encoded><![CDATA[<p>Продвигать огромные каталоги вручную невозможно. Для одного из наших клиентов — компании "ОборонСпецСплав" — мы разработали систему автоматической генерации SEO-структуры.</p><h3>Проблема</h3><p>Каталог содержит более 800 000 позиций. Каждая марка стали, каждый диаметр и ГОСТ имеют свой поисковый спрос. Создавать страницы вручную для такого объема — задача на десятилетия.</p><h3>Решение</h3><p>Мы внедрили алгоритмы автоматической кластеризации и создания уникальных мета-тегов на основе характеристик товаров. Это позволило Яндексу и Google быстро проиндексировать "длинный хвост" запросов.</p><h3>Результат</h3><p>За 4 месяца видимость сайта в поиске выросла в 5 раз. Количество органических лидов увеличилось с 10 до 85 в неделю без увеличения рекламного бюджета.</p>]]></content:encoded>
+      <author>3ant SEO Lead</author>
+      <category>Кейсы</category>
+      <enclosure url="https://images.unsplash.com/photo-1551288049-bbbda5366991?auto=format&fit=crop&q=80&w=1200" length="0" type="image/jpeg" />
+    </item>
+  
+    <item>
+      <title>Топ-5 ошибок при внедрении CRM в отдел продаж</title>
+      <link>https://3ant.ru/blog/crm-integration-mistakes</link>
+      <guid isPermaLink="true">https://3ant.ru/blog/crm-integration-mistakes</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Почему внедрение CRM часто саботируется сотрудниками и как этого избежать. Практические советы от интеграторов.</description>
+      <content:encoded><![CDATA[<p>Вы купили лицензию Bitrix24, наняли интегратора, а менеджеры продолжают вести записи в Excel или блокнотах? Это стандартная ситуация, с которой мы сталкиваемся еженедельно.</p><h3>Ошибка #1: Слишком много обязательных полей</h3><p>Менеджер тратит больше времени на заполнение карточки, чем на разговор с клиентом. На начальном этапе оставьте только телефон, имя и суть запроса.</p><h3>Ошибка #2: Отсутствие обучения</h3><p>Нельзя просто дать логин и пароль. Проведите живое обучение, запишите видео-инструкции под конкретные бизнес-процессы вашей компании.</p><h3>Ошибка #3: CRM как инструмент контроля, а не помощи</h3><p>Если менеджеры чувствуют, что за ними только следят, они будут саботировать систему. Покажите, как CRM помогает им не забывать о клиентах и быстрее закрывать сделки.</p>]]></content:encoded>
+      <author>CRM Specialist</author>
+      <category>Автоматизация</category>
+      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" length="0" type="image/jpeg" />
+    </item>
+  
+</channel>
+</rss>

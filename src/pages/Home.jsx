@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useOutletContext, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ShieldCheck, Crosshair, ArrowRight, Layers, Database, Activity, Target, Zap, LayoutTemplate, MousePointerClick, Search, Settings } from 'lucide-react';
-import { TypewriterText, BentoCard, TelemetryGraph, CursorClicker, CRMFunnel, NetworkNodes, SEOScanner } from '../components/Shared';
+import { ShieldCheck, Crosshair, ArrowRight, Layers, Database, Activity, Target, Zap, LayoutTemplate, MousePointerClick, Search, Settings, CheckCircle2, Users } from 'lucide-react';
+import { TypewriterText, BentoCard, TelemetryGraph, CursorClicker, CRMFunnel, NetworkNodes, SEOScanner, TeamMemberCard } from '../components/Shared';
 import { SEO } from '../components/SEO';
 
 export default function Home() {
@@ -58,8 +58,8 @@ export default function Home() {
   return (
     <main className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-16 md:space-y-32" ref={containerRef}>
       <SEO 
-        title="Агентство системного маркетинга | Продажи, CRM, Рост"
-        description="Строим рабочие связки маркетинга и продаж. Сайт, SEO, CRM и аналитика в единой системе для вашего бизнеса."
+        title="Агентство ABB — Дизайн, сайты и маркетинг для бизнеса"
+        description="Формируем сильный образ компании, создаём сайты под конкретные задачи и выстраиваем маркетинг как системный актив бизнеса."
       />
       {/* HERO SECTION - 100vh stages scaling */}
       <section className="flex-1 lg:min-h-[calc(100vh-160px)] grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-stretch pt-4 md:pt-6">
@@ -71,13 +71,16 @@ export default function Home() {
               </div>
               
               <div className="text-white text-4xl sm:text-5xl md:text-6xl leading-[1] mt-2 font-display">
-                для роста<br/>Вашего Бизнеса
+                Агентство ABB
               </div>
             </h1>
 
             <p className="text-graphite-300 text-lg md:text-xl max-w-xl mb-6 leading-relaxed font-normal font-body">
-              Мы строим сайты и продвижение как единую систему роста: 
-              от первого клика до заявки в CRM, прозрачной воронки и измеримого результата.
+              Дизайн, сайты и маркетинг для бизнеса,<br className="hidden md:block"/> которому нужен результат.
+            </p>
+            
+            <p className="text-graphite-400 text-base max-w-lg mb-8 leading-relaxed font-normal font-body opacity-80">
+              Формируем сильный образ компании, создаём сайты под конкретные задачи и выстраиваем маркетинг как системный актив бизнеса.
             </p>
           </div>
 
@@ -100,7 +103,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-graphite-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <span className="relative flex items-center gap-2">
-                  Обсудить проект <span className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  Получить консультацию <span className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                 </span>
               </button>
               <a href="#" className="group px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/30 active:scale-[0.98]">
@@ -147,83 +150,107 @@ export default function Home() {
       </section>
 
       {/* FILTER SECTION */}
-      <section className="relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-16 flex flex-col lg:flex-row gap-10 md:gap-16 scroll-reveal overflow-hidden transform-gpu">
+      <section className="relative liquid-glass-card rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-16 flex flex-col items-center gap-10 md:gap-16 scroll-reveal overflow-hidden transform-gpu text-center">
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none"></div>
-          <div className="lg:w-1/3 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-6">Мы подходим<br/>не всем</h2>
-            <p className="text-graphite-400 leading-relaxed text-lg">
-              Мы работаем с бизнесом, где сайт и маркетинг — это инструмент продаж, а не витрина. Нам важны прозрачные цифры и управляемость.
+          <div className="max-w-4xl relative z-10">
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-8">
+              Мы подходим бизнесу, которому нужен не просто исполнитель, а понятный результат
+            </h2>
+            <p className="text-graphite-400 leading-relaxed text-xl md:text-2xl font-light">
+              Когда компании нужен не просто красивый макет, не просто сайт и не просто реклама, а понятная система, которая помогает продавать, вызывать доверие и расти.
             </p>
-          </div>
-          <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-emerald-400">
-                <div className="bg-emerald-500/10 p-3 rounded-2xl"><ShieldCheck size={28} /></div>
-                <h4 className="font-bold text-xl text-white font-display uppercase tracking-wider">Вам к нам, если:</h4>
-              </div>
-              <ul className="space-y-5 text-graphite-300 font-body">
-                <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> Нужны готовые заявки и рост, а не просто картинка</li>
-                <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> У вас есть или строится настоящий отдел продаж</li>
-                <li className="flex gap-4 items-start"><span className="text-emerald-500/60 mt-0.5">•</span> Хотите видеть сквозной результат в своей CRM</li>
-              </ul>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-rose-400">
-                <div className="bg-rose-500/10 p-3 rounded-2xl"><Crosshair size={28} /></div>
-                <h4 className="font-semibold text-xl text-white">Нам не по пути, если:</h4>
-              </div>
-              <ul className="space-y-5 text-graphite-300">
-                <li className="flex gap-4 items-start"><span className="text-rose-400/50 mt-0.5">✕</span> Нужен сайт-визитка просто для галочки</li>
-                <li className="flex gap-4 items-start"><span className="text-rose-400/50 mt-0.5">✕</span> Решения по маркетингу принимаются без цифр</li>
-                <li className="flex gap-4 items-start"><span className="text-rose-400/50 mt-0.5">✕</span> Важнее пыльный креатив, чем бизнес-результат</li>
-              </ul>
-            </div>
           </div>
       </section>
 
-      {/* PRINCIPLES */}
-      <section className="scroll-reveal -mx-4 px-4 sm:mx-0 sm:px-0">
+      {/* THREE PILLARS */}
+      <section className="scroll-reveal">
         <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-xs font-black tracking-widest text-graphite-500 uppercase mb-4 font-mono">В чём наша разница</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight font-display leading-[1.2]">Мы не просто агентство.<br className="hidden md:block"/> Мы выстраиваем систему.</h3>
+          <h2 className="text-xs font-black tracking-widest text-graphite-500 uppercase mb-4 font-mono">Направления работы</h2>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight font-display leading-[1.2]">Что мы делаем для бизнеса</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <BentoCard>
-              <div className="flex items-start gap-5">
-                <div className="bg-emerald-500/10 p-4 rounded-2xl text-emerald-400 shrink-0"><Target size={26} /></div>
-                <div>
-                  <h4 className="text-xl md:text-2xl font-medium mb-3 text-white">До сделки, а не до заявки</h4>
-                  <p className="text-graphite-400 leading-relaxed text-sm md:text-base">Мы проектируем путь клиента так, чтобы заявки не терялись и доводились до результата в воронке.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <BentoCard className="bg-white/[0.03] border-white/10 group">
+              <div className="flex flex-col h-full">
+                <div className="bg-emerald-500/10 w-14 h-14 rounded-2xl text-emerald-400 flex items-center justify-center mb-6 ring-1 ring-emerald-500/20 group-hover:bg-emerald-500/20 transition-all duration-500">
+                  <LayoutTemplate size={28} />
                 </div>
+                <h4 className="text-2xl font-bold mb-4 text-white">Дизайн</h4>
+                <p className="text-graphite-400 leading-relaxed text-sm md:text-base mb-6">
+                  Помогает бизнесу выглядеть сильнее и убедительнее. Формирует доверие и создает цельный визуальный образ компании.
+                </p>
+                <ul className="space-y-2 text-xs font-bold tracking-wider text-graphite-500 uppercase font-mono mt-auto">
+                  <li>• Фирменный стиль</li>
+                  <li>• Визуальная система</li>
+                  <li>• Рекламные материалы</li>
+                  <li>• Digital-дизайн</li>
+                </ul>
               </div>
           </BentoCard>
-          <BentoCard>
-              <div className="flex items-start gap-5">
-                <div className="bg-emerald-500/10 p-4 rounded-2xl text-emerald-400 shrink-0"><Database size={26} /></div>
-                <div>
-                  <h4 className="text-xl md:text-2xl font-medium mb-3 text-white">CRM как центр управления</h4>
-                  <p className="text-graphite-400 leading-relaxed text-sm md:text-base">Заявки фиксируются и считаются в CRM: источник, статус, ответственность, конверсия, скорость обработки.</p>
+          <BentoCard className="bg-white/[0.03] border-white/10 group">
+              <div className="flex flex-col h-full">
+                <div className="bg-emerald-500/10 w-14 h-14 rounded-2xl text-emerald-400 flex items-center justify-center mb-6 ring-1 ring-emerald-500/20 group-hover:bg-emerald-500/20 transition-all duration-500">
+                  <Database size={28} />
                 </div>
+                <h4 className="text-2xl font-bold mb-4 text-white">Сайты</h4>
+                <p className="text-graphite-400 leading-relaxed text-sm md:text-base mb-6">
+                  Превращают внимание в обращения и продажи. Создаются под конкретные задачи бизнеса на оптимальных платформах.
+                </p>
+                <ul className="space-y-2 text-xs font-bold tracking-wider text-graphite-500 uppercase font-mono mt-auto">
+                  <li>• Лендинги и корпоративные сайты</li>
+                  <li>• Решения на Bitrix / WordPress</li>
+                  <li>• Проекты на React</li>
+                  <li>• Высокая конверсия</li>
+                </ul>
               </div>
           </BentoCard>
-          <BentoCard>
-              <div className="flex items-start gap-5">
-                <div className="bg-emerald-500/10 p-4 rounded-2xl text-emerald-400 shrink-0"><LayoutTemplate size={26} /></div>
-                <div>
-                  <h4 className="text-xl md:text-2xl font-medium mb-3 text-white">Сайт — часть бизнеса</h4>
-                  <p className="text-graphite-400 leading-relaxed text-sm md:text-base">Структура, страницы и контент создаются под спрос и реальные сценарии продаж, а не под шаблон.</p>
+          <BentoCard className="bg-white/[0.03] border-white/10 group">
+              <div className="flex flex-col h-full">
+                <div className="bg-emerald-500/10 w-14 h-14 rounded-2xl text-emerald-400 flex items-center justify-center mb-6 ring-1 ring-emerald-500/20 group-hover:bg-emerald-500/20 transition-all duration-500">
+                  <Target size={28} />
                 </div>
+                <h4 className="text-2xl font-bold mb-4 text-white">Маркетинг</h4>
+                <p className="text-graphite-400 leading-relaxed text-sm md:text-base mb-6">
+                  Помогает привлекать спрос и управлять ростом. Маркетинг как системный, прозрачный и измеримый актив бизнеса.
+                </p>
+                <ul className="space-y-2 text-xs font-bold tracking-wider text-graphite-500 uppercase font-mono mt-auto">
+                  <li>• SEO-продвижение</li>
+                  <li>• Источники трафика</li>
+                  <li>• Аналитика и отчетность</li>
+                  <li>• Системный подход</li>
+                </ul>
               </div>
           </BentoCard>
-          <BentoCard>
-              <div className="flex items-start gap-5">
-                <div className="bg-emerald-500/10 p-4 rounded-2xl text-emerald-400 shrink-0"><Zap size={26} /></div>
-                <div>
-                  <h4 className="text-xl md:text-2xl font-medium mb-3 text-white">Автоматизация вместо хаоса</h4>
-                  <p className="text-graphite-400 leading-relaxed text-sm md:text-base">Используем интеграции и автоматизацию процессов, чтобы снизить ручной труд и ускорить развитие.</p>
-                </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
+      <section className="scroll-reveal relative liquid-glass-card rounded-[2rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/[0.03] to-transparent pointer-events-none"></div>
+        <div className="max-w-4xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 font-display leading-tight">
+            Когда дизайн, сайт и маркетинг работают вместе
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <p className="text-graphite-400 text-lg leading-relaxed font-body">
+              Дизайн создает образ и доверие. Сайт превращает интерес в действие. Маркетинг приводит спрос и усиливает рост. 
+              <br/><br/>
+              Вместе они дают бизнесу более сильный результат, чем по отдельности. Это база, на которой мы строим развитие наших клиентов.
+            </p>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5">
+                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span className="text-white font-medium">Единая визуальная стратегия</span>
               </div>
-          </BentoCard>
+              <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5">
+                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span className="text-white font-medium">Бесшовная воронка продаж</span>
+              </div>
+              <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5">
+                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span className="text-white font-medium">Прозрачная аналитика на всех этапах</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -357,107 +384,14 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* DIRECTIONS */}
-      <section className="scroll-reveal">
-        <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-xs font-black tracking-[0.3em] text-graphite-500 uppercase mb-4 font-mono">Направления</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight font-display leading-[1.2]">Что мы строим для бизнеса</h3>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[280px]">
-          <BentoCard className="md:col-span-3">
-            <div className="h-full flex flex-col justify-between relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                  <MousePointerClick className="text-white" size={28}/>
-                </div>
-                <CursorClicker className="relative top-0 right-0" />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-3 font-display">Сайты под лидогенерацию</h4>
-                <p className="text-graphite-400 leading-relaxed font-body group-hover:text-graphite-300 transition-colors">
-                  Проектируем структуру, логику и интерфейсы, которые доводят посетителя до обращения.
-                </p>
-              </div>
-            </div>
-          </BentoCard>
 
-          <BentoCard className="md:col-span-3">
-            <div className="h-full flex flex-col justify-between relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="bg-graphite-700/50 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                  <Search className="text-white" size={28}/>
-                </div>
-                <SEOScanner className="relative top-0 right-0" />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-3 font-display">SEO как актив</h4>
-                <p className="text-graphite-400 leading-relaxed font-body group-hover:text-graphite-300 transition-colors">
-                  Делаем поисковое продвижение системно: архитектура, контент, внутренняя оптимизация, рост спроса.
-                </p>
-              </div>
-            </div>
-          </BentoCard>
-
-          <BentoCard className="md:col-span-2">
-              <div className="h-full flex flex-col justify-between relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                    <Activity className="text-white" size={24}/>
-                  </div>
-                  <TelemetryGraph className="relative top-0 right-0" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 font-display">Performance-маркетинг</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
-                    Запускаем и оптимизируем платный трафик там, где он усиливает систему: Директ, Avito, VK.
-                  </p>
-                </div>
-              </div>
-          </BentoCard>
-
-          <BentoCard className="md:col-span-2">
-              <div className="h-full flex flex-col justify-between relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                    <Database className="text-white" size={24}/>
-                  </div>
-                  <CRMFunnel className="relative top-0 right-0" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 font-display">CRM и аналитика</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
-                    Интеграции, воронки, источники лидов, контроль обработки, отчётность и прозрачность.
-                  </p>
-                </div>
-              </div>
-          </BentoCard>
-          
-          <BentoCard className="md:col-span-2">
-              <div className="h-full flex flex-col justify-between relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="bg-graphite-700/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)]">
-                    <Settings className="text-white" size={24}/>
-                  </div>
-                  <NetworkNodes className="relative top-0 right-0" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 font-display">Автоматизация процессов</h4>
-                  <p className="text-graphite-400 text-sm leading-relaxed font-body">
-                    Интеграции и сценарии автоматизации, которые ускоряют маркетинг и разгружают команду.
-                  </p>
-                </div>
-              </div>
-          </BentoCard>
-        </div>
-      </section>
 
       {/* CASES */}
       <section className="scroll-reveal mt-32">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <h2 className="text-sm font-bold tracking-widest text-graphite-500 uppercase mb-4">Наши работы</h2>
-            <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight mb-4">Опыт, который можно проверить</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight mb-4">Проекты, в которых важен результат, а не только картинка</h3>
             <p className="text-graphite-400 max-w-xl text-lg">
               Мы показываем не «красивые макеты», а результат и логику работы: что было, что сделали, как считали и что изменилось.
             </p>
@@ -530,11 +464,11 @@ export default function Home() {
         
         <div className="max-w-4xl mx-auto flex flex-col gap-5">
           {[
-            { n: "1", title: "Диагностика", text: "Цели, продукт, экономика, логика продаж, текущие источники заявок." },
-            { n: "2", title: "Проектирование системы", text: "Структура сайта, воронка, точки конверсии, требования к CRM." },
-            { n: "3", title: "Внедрение", text: "Сайт, посадочные страницы, необходимые интеграции, сквозная аналитика." },
-            { n: "4", title: "Запуск продвижения", text: "SEO и/или перформанс (платный трафик) как инструмент усиления." },
-            { n: "5", title: "Оптимизация и рост", text: "Анализ данных, улучшения интерфейсов, масштабирование связок." }
+            { n: "1", title: "Погружаемся в задачу бизнеса", text: "Изучаем продукт, цели, экономику и текущую логику продаж." },
+            { n: "2", title: "Определяем нужный инструмент", text: "Решаем, что именно нужно: дизайн, сайт, маркетинг или комплексная связка из всех трех направлений." },
+            { n: "3", title: "Собираем решение под задачу", text: "Проектируем архитектуру, создаем контент и функционал, нацеленный на конкретный бизнес-результат." },
+            { n: "4", title: "Запускаем и внедряем", text: "Проводим техническую интеграцию, настраиваем аналитику и выводим проект в рабочую среду." },
+            { n: "5", title: "Анализируем и усиливаем", text: "Следим за показателями, находим узкие места и масштабируем то, что дает реальный рост." }
           ].map((step, idx) => (
             <div key={idx} className="group relative flex gap-6 md:gap-10 bg-graphite-800/40 p-6 md:p-8 rounded-[2rem] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 hover:bg-graphite-800/80 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -559,12 +493,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TEAM & PRINCIPLES */}
+      <section className="scroll-reveal mt-32">
+        <div className="bg-[#080808] border border-white/5 rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-emerald-500/[0.02] blur-[120px] rounded-full pointer-events-none"></div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 items-start relative z-10">
+            <div>
+              <h2 className="text-sm font-bold tracking-widest text-emerald-500 uppercase mb-6 flex items-center gap-3">
+                <Users size={16} /> Команда и ценности
+              </h2>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-8 leading-tight font-display">
+                Люди и принципы, на которых строится работа ABB
+              </h3>
+              <p className="text-graphite-400 text-lg md:text-xl mb-12 leading-relaxed font-body">
+                Работа с бизнесом требует не только экспертизы, но и понятной логики: прозрачного процесса, сильной команды и решений, которые можно обосновать.
+              </p>
+              
+              <div className="space-y-6">
+                {[
+                  "Работаем прозрачно",
+                  "Объясняем решения",
+                  "Подбираем формат под задачу",
+                  "Не продаем лишнего",
+                  "Показываем реальные проекты",
+                  "Считаем результат"
+                ].map((principle, idx) => (
+                  <div key={idx} className="flex items-center gap-4 text-white font-medium">
+                    <CheckCircle2 className="text-emerald-500" size={20} />
+                    <span>{principle}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <TeamMemberCard 
+                name="Егор Афанасьев"
+                role="Программист / сайты и структура"
+                description="Отвечает за архитектуру, функциональность и реализацию сайтов под задачи бизнеса."
+              />
+              <TeamMemberCard 
+                name="Ирина Боброва"
+                role="Арт-директор / дизайн"
+                description="Формирует визуальный образ проектов и отвечает за цельную дизайн-систему."
+              />
+              <TeamMemberCard 
+                name="Александр Бобров"
+                role="Проджект / аналитика"
+                description="Выстраивает логику продвижения, координирует процессы и держит фокус на результате."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER CTA */}
-      <section className="mt-16 md:mt-32 bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 scroll-reveal">
+  <section className="mt-16 md:mt-32 bg-graphite-800 rounded-[1.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-24 text-center flex flex-col items-center relative overflow-hidden border border-white/10 scroll-reveal">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none mix-blend-screen"></div>
         <div className="absolute top-[-50%] left-1/2 -translate-x-1/2 w-[80%] h-full bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-4xl mb-6 md:mb-8 relative z-10 font-display">
-          Если вам нужен маркетинг, который работает — давайте обсудим задачу
+          Поможем понять, что именно даст результат: отдельная услуга или связка из нескольких направлений
         </h2>
         <p className="text-graphite-300 text-lg md:text-xl mb-12 max-w-2xl relative z-10 font-normal font-body leading-relaxed">
           Коротко опишите продукт и цель — мы предложим логику системы и первые шаги.<br/>
@@ -575,7 +564,7 @@ export default function Home() {
           className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98] font-display"
         >
           <span className="flex items-center gap-3">
-            Обсудить задачу <ArrowRight size={22} />
+            Получить консультацию <ArrowRight size={22} />
           </span>
         </button>
       </section>
