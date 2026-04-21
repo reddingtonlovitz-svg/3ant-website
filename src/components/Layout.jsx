@@ -65,13 +65,13 @@ export const Header = ({ onOpenContact }) => {
           
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:89137154800" className="hidden sm:flex items-center gap-3 bg-graphite-800/80 px-5 py-2.5 rounded-full border border-white/5 hover:border-white/20 hover:text-white transition-all duration-300">
+            <a href="tel:89137154800" className="hidden sm:flex items-center gap-3 bg-graphite-800/40 px-5 py-2.5 rounded-2xl border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:text-white transition-all duration-300">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
               8 (913) 715-48-00
             </a>
             <button 
               onClick={onOpenContact}
-              className="bg-emerald-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-[pulse-glow_2s_ease-in-out_infinite]"
+              className="bg-transparent text-white px-6 py-2.5 rounded-2xl border border-emerald-500 font-bold text-sm hover:bg-emerald-500/10 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all"
             >
               Обсудить проект
             </button>
@@ -119,7 +119,7 @@ export const Header = ({ onOpenContact }) => {
           </a>
           <button 
             onClick={() => { setMobileMenuOpen(false); onOpenContact(); }}
-            className="mt-4 bg-white text-graphite-950 px-10 py-4 rounded-full font-bold text-base active:scale-95 transition-transform shadow-lg shadow-emerald-500/10"
+            className="mt-4 bg-transparent border border-emerald-500 text-white px-10 py-3.5 rounded-2xl font-bold text-base active:scale-95 transition-all hover:bg-emerald-500/10"
           >
             Обсудить проект
           </button>

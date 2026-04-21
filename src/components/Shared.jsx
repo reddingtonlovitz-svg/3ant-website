@@ -225,13 +225,12 @@ export const LiquidGlassTag = ({ children, className }) => (
 export const LiquidGlassButton = ({ children, className, ...props }) => (
   <button 
     className={clsx(
-      "group relative px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_30px_rgba(0,0,0,0.5)]",
+      "group relative px-8 py-3.5 bg-emerald-500/0 backdrop-blur-md border border-emerald-500 text-white font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] hover:bg-emerald-500/10 hover:shadow-[0_0_30px_rgba(16,185,129,0.2)]",
       className
     )}
     {...props}
   >
-    <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    <div className="absolute inset-0 bg-emerald-500/10 pointer-events-none translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+    <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     <span className="relative z-10 flex items-center justify-center gap-3 font-display">
       {children}
     </span>

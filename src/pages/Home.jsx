@@ -97,18 +97,18 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap items-center gap-6">
-              <button 
+              <LiquidGlassButton 
                 onClick={openContactModal}
-                className="group relative px-8 py-4 bg-white text-graphite-950 font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-2xl shadow-white/5"
+                className="hover:shadow-[0_0_40px_rgba(16,185,129,0.3)]"
               >
-                <div className="absolute inset-0 bg-graphite-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative flex items-center gap-2">
-                  Получить консультацию <span className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-                </span>
-              </button>
-              <a href="#" className="group px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/30 active:scale-[0.98]">
+                Получить консультацию <span className="text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+              </LiquidGlassButton>
+              <Link 
+                to="/cases" 
+                className="px-8 py-3.5 border border-white/20 text-white font-bold rounded-2xl transition-all duration-300 hover:bg-white/5 hover:border-emerald-500/50 hover:text-emerald-400"
+              >
                 Посмотреть кейсы
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -398,7 +398,7 @@ export default function Home() {
           </div>
           <Link 
             to="/cases"
-            className="hidden md:flex items-center gap-2 text-white border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-graphite-950 transition-colors"
+            className="hidden md:flex items-center gap-3 text-white border border-emerald-500/50 px-8 py-3 rounded-2xl hover:bg-emerald-500/10 hover:border-emerald-500 transition-all font-bold text-sm"
           >
             Все кейсы <ArrowRight size={18}/>
           </Link>
@@ -449,7 +449,7 @@ export default function Home() {
         </div>
         <Link 
           to="/cases"
-          className="md:hidden mt-8 w-full flex justify-center items-center gap-2 text-white border border-white/20 px-6 py-4 rounded-full hover:bg-white hover:text-graphite-950 transition-colors"
+          className="md:hidden mt-8 w-full flex justify-center items-center gap-3 text-white border border-emerald-500/50 px-8 py-4 rounded-2xl hover:bg-emerald-500/10 transition-all font-bold"
         >
           Все кейсы <ArrowRight size={18}/>
         </Link>
@@ -559,14 +559,12 @@ export default function Home() {
           Коротко опишите продукт и цель — мы предложим логику системы и первые шаги.<br/>
           Без “пакетов” и лишних обещаний.
         </p>
-        <button 
+        <LiquidGlassButton 
           onClick={openContactModal}
-          className="relative z-10 px-10 py-5 bg-white text-graphite-950 text-xl font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.2)] active:scale-[0.98] font-display"
+          className="px-16 py-5 text-xl hover:shadow-[0_0_50px_rgba(16,185,129,0.3)] bg-emerald-500/5"
         >
-          <span className="flex items-center gap-3">
-            Получить консультацию <ArrowRight size={22} />
-          </span>
-        </button>
+          Получить консультацию <ArrowRight size={26} />
+        </LiquidGlassButton>
       </section>
 
     </main>
