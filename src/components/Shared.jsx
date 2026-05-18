@@ -221,7 +221,6 @@ export const LiquidGlassTag = ({ children, className }) => (
   </div>
 );
 
-// NEW: Liquid Glass Button (Clickable CTA)
 export const LiquidGlassButton = ({ children, className, ...props }) => (
   <button 
     className={clsx(
